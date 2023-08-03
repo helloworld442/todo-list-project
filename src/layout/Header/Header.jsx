@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { dateButton } from "../../recoil/atom";
 import {
   HeaderCol,
   HeaderDesToggle,
@@ -13,7 +14,7 @@ const dates = ["S", "M", "T", "W", "T", "F", "S"];
 const distances = [-2, 53, 108, 163, 222, 280, 338];
 
 const HeaderContainer = () => {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useRecoilState(dateButton);
 
   const onToggleButton = (idx) => setNumber(idx);
 
