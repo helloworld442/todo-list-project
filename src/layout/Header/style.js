@@ -21,7 +21,7 @@ export const HeaderTitleText = styled.span`
       display: block;
       font-size: 1rem;
       font-weight: bold;
-      color: #888;
+      color: #aaa;
     `}
   ${(props) =>
     props.size === "large" &&
@@ -59,7 +59,7 @@ export const HeaderDescItem = styled.li`
     display: block;
     font-size: 0.825rem;
     font-weight: bold;
-    color: #888;
+    color: #aaa;
   }
   .date-num {
     display: block;
