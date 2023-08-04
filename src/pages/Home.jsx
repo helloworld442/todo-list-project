@@ -1,15 +1,19 @@
 import Layout from "../layout/Layout";
-import HeaderContainer from "../layout/Header/Header";
+import Header from "../layout/Header/Header";
 import TodoListContainer from "../container/TodoListContainer";
-import FooterContainer from "../layout/Footer";
-import { PlusOutlined } from "@ant-design/icons";
+import Footer from "../layout/Footer";
 
 const Home = () => {
   return (
     <Layout>
-      <HeaderContainer />
+      <Header>
+        <Header.Title />
+        <Header.Desc />
+      </Header>
       <TodoListContainer />
-      <FooterContainer icon={<PlusOutlined />} location="/write" />
+      <Footer>
+        <Footer.Icon />
+      </Footer>
     </Layout>
   );
 };

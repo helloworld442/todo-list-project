@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { PlusOutlined } from "@ant-design/icons";
 
-const FooterContainer = ({ icon, location }) => {
+const Footer = ({ children }) => {
   return (
     <FooterBox>
-      <Link to={location}>
-        <FooterToggleIcon>{icon}</FooterToggleIcon>
-      </Link>
+      <a href="/write">{children}</a>
     </FooterBox>
   );
 };
@@ -20,7 +18,7 @@ const FooterBox = styled.div`
   align-items: center;
 `;
 
-const FooterToggleIcon = styled.div`
+const FooterToggleIcon = styled(PlusOutlined)`
   width: 65px;
   height: 65px;
   border-radius: 100%;
@@ -32,4 +30,6 @@ const FooterToggleIcon = styled.div`
   color: #fff;
 `;
 
-export default FooterContainer;
+Footer.Icon = FooterToggleIcon;
+
+export default Footer;

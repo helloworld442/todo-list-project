@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import TodoForm from "../components/todo/todoform/TodoForm";
+import { useMutation, useQueryClient } from "react-query";
+import { postTodo } from "../api/todo";
+import { useNavigate } from "react-router-dom";
 
 const TodoFormContainer = () => {
+  const navigateTo = useNavigate();
+  const queryClient = useQueryClient();
   const [form, setForm] = useState({
     title: "",
     content: "",
@@ -13,6 +18,16 @@ const TodoFormContainer = () => {
     content: "",
     color: "",
     date: "",
+  });
+
+  const todoMutation = useMutation(postTodo, {
+    onSuccess: () => {
+      queryClient.invalidateQueries("todos");
+      navigateTo("/");
+    },
+    onError: (error) => {
+      console.log(error);
+    },
   });
 
   const validateTitle = (title) => {
@@ -39,17 +54,17 @@ const TodoFormContainer = () => {
     return "";
   };
 
-  const onChangeInput = (e) => {
+  const onChangeInput = useCallback((e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
 
-  const onChangeSelect = (target) => {
+  const onChangeSelect = useCallback((target) => {
     const { name, value } = target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
 
   const onSubmitTodo = (e) => {
     e.preventDefault();
@@ -67,8 +82,13 @@ const TodoFormContainer = () => {
       });
       return;
     }
+    todoMutation.mutate(form);
     setForm({ title: "", content: "", color: "", date: "" });
   };
+
+  if (todoMutation.isLoading) return <div>로딩 중입니다 ...</div>;
+
+  if (todoMutation.isError) return <div>에러 입니다 ....</div>;
 
   return (
     <TodoForm

@@ -2,7 +2,7 @@ import { css, styled } from "styled-components";
 
 export const StTodoList = styled.ul`
   width: 100%;
-  height: 300px;
+  height: 350px;
   padding: 0 20px;
   padding-top: 50px;
   box-sizing: border-box;
@@ -13,6 +13,7 @@ export const StTodoItem = styled.li`
   position: relative;
   width: 100%;
   height: 50px;
+  padding-bottom: 24px;
 `;
 
 export const TodoItemIcon = styled.div`
@@ -21,7 +22,7 @@ export const TodoItemIcon = styled.div`
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  background: #8fb0c6;
+  background: ${(props) => props.color};
   transform: translateY(-50%);
 `;
 

@@ -1,3 +1,4 @@
+import React from "react";
 import { StInput, StInputBox, StInputErrorText, StInputLabel } from "./style";
 
 const inputDict = {
@@ -17,16 +18,10 @@ const InputBox = ({ type, name, value, error, onChange }) => {
   return (
     <StInputBox>
       <StInputLabel>{inputDict[name]}</StInputLabel>
-      <StInput
-        type={type}
-        name={name}
-        error={error}
-        value={value}
-        onChange={onChange}
-      />
+      <StInput type={type} name={name} error={error} value={value} onChange={onChange} />
       <StInputErrorText>{error}</StInputErrorText>
     </StInputBox>
   );
 };
 
-export default InputBox;
+export default React.memo(InputBox);

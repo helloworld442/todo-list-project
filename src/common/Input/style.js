@@ -14,7 +14,8 @@ export const StInput = styled.input`
   border: 2px solid #aaa;
   border-radius: 8px;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
   color: #333;
 
   ${(props) =>

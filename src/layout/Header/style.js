@@ -27,7 +27,7 @@ export const HeaderTitleText = styled.span`
     props.size === "large" &&
     css`
       display: block;
-      font-size: 2.2rem;
+      font-size: 2.6rem;
       font-weight: 900;
       color: #333;
     `}
@@ -78,4 +78,21 @@ export const HeaderDesToggle = styled.div`
   background: rgb(101, 136, 247);
   transition: all 0.5s ease-in-out;
   transform: translateX(${(props) => props.distance}px);
+`;
+
+export const HeaderNavBox = styled.div`
+  width: 100%;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #aaa;
+  a {
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    color: #333;
+  }
 `;

@@ -1,29 +1,20 @@
 import { useRecoilState } from "recoil";
 import { dateButton } from "../../recoil/atom";
+import { Link } from "react-router-dom";
 import {
   HeaderCol,
   HeaderDesToggle,
   HeaderDescBox,
   HeaderDescItem,
   HeaderDescList,
+  HeaderNavBox,
   HeaderTitleBox,
   HeaderTitleText,
 } from "./style";
+import { HomeOutlined, LeftOutlined } from "@ant-design/icons";
 
-const dates = ["S", "M", "T", "W", "T", "F", "S"];
-const distances = [-2, 53, 108, 163, 222, 280, 338];
-
-const HeaderContainer = () => {
-  const [number, setNumber] = useRecoilState(dateButton);
-
-  const onToggleButton = (idx) => setNumber(idx);
-
-  return (
-    <HeaderCol>
-      <HeaderTitle />
-      <HeaderDescription number={number} onCount={onToggleButton} />
-    </HeaderCol>
-  );
+const Header = ({ children }) => {
+  return <HeaderCol>{children}</HeaderCol>;
 };
 
 const HeaderTitle = () => {
@@ -35,12 +26,18 @@ const HeaderTitle = () => {
   );
 };
 
-const HeaderDescription = ({ number, onCount }) => {
+const HeaderDescription = () => {
+  const dates = ["S", "M", "T", "W", "T", "F", "S"];
+  const distances = [-2, 53, 108, 163, 222, 280, 338];
+  const [number, setNumber] = useRecoilState(dateButton);
+
+  const onToggleButton = (idx) => setNumber(idx);
+
   return (
     <HeaderDescBox>
       <HeaderDescList>
         {dates.map((date, idx) => (
-          <HeaderDescItem key={idx} onClick={() => onCount(idx)}>
+          <HeaderDescItem key={idx} onClick={() => onToggleButton(idx)}>
             <span className="date-day">{date}</span>
             <span className="date-num">{6 + idx}</span>
           </HeaderDescItem>
@@ -51,4 +48,21 @@ const HeaderDescription = ({ number, onCount }) => {
   );
 };
 
-export default HeaderContainer;
+const HeaderNav = () => {
+  return (
+    <HeaderNavBox>
+      <Link to="/">
+        <LeftOutlined />
+      </Link>
+      <Link onClick={() => window.history.back()}>
+        <HomeOutlined />
+      </Link>
+    </HeaderNavBox>
+  );
+};
+
+Header.Title = HeaderTitle;
+Header.Desc = HeaderDescription;
+Header.Nav = HeaderNav;
+
+export default Header;

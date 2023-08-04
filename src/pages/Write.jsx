@@ -1,13 +1,14 @@
 import Layout from "../layout/Layout";
 import TodoFormContainer from "../container/TodoFormContainer";
-import FooterContainer from "../layout/Footer";
-import { CloseOutlined } from "@ant-design/icons";
+import Header from "../layout/Header/Header";
 
 const Write = () => {
   return (
     <Layout>
+      <Header>
+        <Header.Nav />
+      </Header>
       <TodoFormContainer />
-      <FooterContainer icon={<CloseOutlined />} location="/" />
     </Layout>
   );
 };

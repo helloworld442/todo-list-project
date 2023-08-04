@@ -17,11 +17,6 @@ export const DropDownTrigger = styled.span`
   transform: translateY(-50%);
   font-size: 1rem;
   font-weight: bold;
-  ${(props) =>
-    props.$active &&
-    css`
-      display: none;
-    `}
 `;
 
 export const DropDownList = styled.ul`
@@ -38,7 +33,7 @@ export const DropDownList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 10px;
-
+  cursor: pointer;
   ${(props) =>
     props.error &&
     css`
@@ -52,17 +47,6 @@ export const DropDownItem = styled.li`
   width: 100px;
   font-size: 1rem;
   font-weight: bold;
-  cursor: pointer;
-`;
-
-export const DropDownIcon = styled.span`
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  font-weight: bold;
-  color: rgb(101, 136, 247);
   cursor: pointer;
 `;
 

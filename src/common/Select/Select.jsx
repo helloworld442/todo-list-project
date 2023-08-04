@@ -1,8 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   DropDownBox,
   DropDownErrorText,
-  DropDownIcon,
   DropDownItem,
   DropDownLabel,
   DropDownList,
@@ -25,29 +24,32 @@ const selectDict = {
 const Select = ({ name, options, value, error, onChange }) => {
   const [active, setActive] = useState(false);
 
-  const onToggleSelect = (option) => {
+  const onToggleSelect = () => {
     setActive(!active);
+  };
+
+  const onClickSelect = (option) => {
     onChange({ name, value: option });
+    setActive(false);
   };
 
   return (
     <DropDownBox>
       <DropDownLabel>{selectDict[name]}</DropDownLabel>
       <DropDownList error={error}>
-        <DropDownTrigger $active={active}>{value}</DropDownTrigger>
+        <DropDownTrigger onClick={onToggleSelect}>
+          {active ? null : value || "옵션을 선택해 주세요"}
+        </DropDownTrigger>
         {active &&
           options.map((option, idx) => (
-            <DropDownItem key={idx} onClick={() => onToggleSelect(option)}>
+            <DropDownItem key={idx} onClick={() => onClickSelect(option)}>
               {option}
             </DropDownItem>
           ))}
-        <DropDownIcon onClick={() => onToggleSelect(value)}>
-          Change
-        </DropDownIcon>
       </DropDownList>
       <DropDownErrorText>{error}</DropDownErrorText>
     </DropDownBox>
   );
 };
 
-export default Select;
+export default React.memo(Select);
