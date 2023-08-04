@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { PlusOutlined } from "@ant-design/icons";
 
 const Footer = ({ children }) => {
+  console.log("hello wor1d");
   return (
     <FooterBox>
       <a href="/write">{children}</a>
