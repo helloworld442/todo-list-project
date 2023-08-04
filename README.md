@@ -70,10 +70,7 @@
 
 **`결과`**
 
-- 해결 전
-  ![스크린샷 2023-08-04 오후 6.56.33.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e55f8d35-7c58-4054-b7f6-7dbb78b2ed21/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6.56.33.png)
-- 해결 후
-  ![스크린샷 2023-08-04 오후 6.57.26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ad39be56-6a57-4610-8cfc-43b1d0866a4e/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_6.57.26.png)
+해결 과정 노션 페이지 (https://broad-wishbone-2bb.notion.site/106a3bbae86243cab0c71b99d42b8715?pvs=4)
 
 </details>
 
@@ -93,10 +90,6 @@
 
 **`결과`**
 
-- 해결 전
-  ![스크린샷 2023-08-04 오후 7.00.53.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41bd6bfd-410e-40e5-adb4-c458d6fc44e2/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.00.53.png)
-
--해결 후
-![스크린샷 2023-08-04 오후 7.01.19.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5681a9b0-226f-406d-9e10-dc2045f4f48c/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-08-04_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_7.01.19.png)
+해결 과정 노션 페이지 (https://broad-wishbone-2bb.notion.site/106a3bbae86243cab0c71b99d42b8715?pvs=4)
 
 </details>
