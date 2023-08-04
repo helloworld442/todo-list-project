@@ -1,6 +1,5 @@
-import { useRecoilState } from "recoil";
-import { dateButton } from "../../recoil/atom";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import {
   HeaderCol,
   HeaderDesToggle,
@@ -28,22 +27,24 @@ const HeaderTitle = () => {
 
 const HeaderDescription = () => {
   const dates = ["S", "M", "T", "W", "T", "F", "S"];
-  const distances = [-2, 53, 108, 163, 222, 280, 338];
-  const [number, setNumber] = useRecoilState(dateButton);
+  const [position, setPosition] = useState({ left: 0 });
 
-  const onToggleButton = (idx) => setNumber(idx);
+  const onMoveButton = (e) => {
+    const buttonRect = e.target.getBoundingClientRect();
+    setPosition({ left: buttonRect.right });
+  };
 
   return (
     <HeaderDescBox>
       <HeaderDescList>
         {dates.map((date, idx) => (
-          <HeaderDescItem key={idx} onClick={() => onToggleButton(idx)}>
+          <HeaderDescItem key={idx} onClick={onMoveButton}>
             <span className="date-day">{date}</span>
             <span className="date-num">{6 + idx}</span>
           </HeaderDescItem>
         ))}
       </HeaderDescList>
-      <HeaderDesToggle distance={distances[number]} />
+      <HeaderDesToggle position={position} />
     </HeaderDescBox>
   );
 };
