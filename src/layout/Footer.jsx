@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { HomeOutlined, PlusOutlined, UserOutlined } from "@ant-design/icons";
+import { HomeOutlined, LineChartOutlined, PlusOutlined, UserOutlined } from "@ant-design/icons";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -13,10 +13,12 @@ const Footer = () => {
         return setActive(0);
       case "/write":
         return setActive(1);
+      case "/chart":
+        return setActive(2);
       case "/login":
-        return setActive(2);
+        return setActive(3);
       case "/register":
-        return setActive(2);
+        return setActive(3);
     }
   }, []);
 
@@ -34,8 +36,13 @@ const Footer = () => {
           </Link>
         </FooterItem>
         <FooterItem>
+          <Link to="/chart">
+            <LineChartOutlined className={active === 2 ? "active" : ""} />
+          </Link>
+        </FooterItem>
+        <FooterItem>
           <Link to="/login">
-            <UserOutlined className={active === 2 ? "active" : ""} />
+            <UserOutlined className={active === 3 ? "active" : ""} />
           </Link>
         </FooterItem>
       </FooterList>
