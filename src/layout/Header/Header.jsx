@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {
   HeaderCol,
@@ -50,12 +50,14 @@ const HeaderDescription = () => {
 };
 
 const HeaderNav = () => {
+  const navigateTo = useNavigate();
+
   return (
     <HeaderNavBox>
-      <Link to="/">
+      <Link onClick={() => navigateTo(-1)}>
         <LeftOutlined />
       </Link>
-      <Link onClick={() => window.history.back()}>
+      <Link to="/">
         <HomeOutlined />
       </Link>
     </HeaderNavBox>

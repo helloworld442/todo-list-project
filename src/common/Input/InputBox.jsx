@@ -4,6 +4,9 @@ import { StInput, StInputBox, StInputErrorText, StInputLabel } from "./style";
 const inputDict = {
   title: "TITLE",
   content: "CONTNENT",
+  email: "EMAIL",
+  username: "USERNAME",
+  password: "PASSWORD",
 };
 
 /**
