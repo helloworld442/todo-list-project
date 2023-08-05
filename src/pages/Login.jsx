@@ -1,6 +1,7 @@
 import Layout from "../layout/Layout";
 import Header from "../layout/Header/Header";
 import LoginContainer from "../container/LoginContainer";
+import Footer from "../layout/Footer";
 
 const Login = () => {
   return (
@@ -9,6 +10,7 @@ const Login = () => {
         <Header.Nav />
       </Header>
       <LoginContainer />
+      <Footer />
     </Layout>
   );
 };

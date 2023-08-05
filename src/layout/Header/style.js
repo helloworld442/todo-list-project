@@ -34,6 +34,7 @@ export const HeaderTitleText = styled.span`
 `;
 
 export const HeaderDescBox = styled.div`
+  position: relative;
   width: 100%;
   height: 120px;
   padding: 0 20px;
@@ -70,13 +71,13 @@ export const HeaderDescItem = styled.li`
 
 export const HeaderDesToggle = styled.div`
   position: absolute;
-  top: 295px;
-  left: calc(${(props) => props.position.left}px - 12.5px);
+  bottom: -8px;
   width: 14px;
   height: 14px;
   border-radius: 100%;
   background: rgb(101, 136, 247);
   transition: all 0.5s ease-in-out;
+  transform: translateX(${(props) => props.distance}px);
 `;
 
 export const HeaderNavBox = styled.div`

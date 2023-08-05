@@ -1,35 +1,79 @@
 import { styled } from "styled-components";
-import { PlusOutlined } from "@ant-design/icons";
+import { HomeOutlined, PlusOutlined, UserOutlined } from "@ant-design/icons";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-const Footer = ({ children }) => {
+const Footer = () => {
+  const { pathname } = useLocation();
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    switch (pathname) {
+      case "/":
+        return setActive(0);
+      case "/write":
+        return setActive(1);
+      case "/login":
+        return setActive(2);
+      case "/register":
+        return setActive(2);
+    }
+  }, []);
+
   return (
     <FooterBox>
-      <a href="/write">{children}</a>
+      <FooterList>
+        <FooterItem>
+          <Link to="/">
+            <HomeOutlined className={active === 0 ? "active" : ""} />
+          </Link>
+        </FooterItem>
+        <FooterItem>
+          <Link to="/write">
+            <PlusOutlined className={active === 1 ? "active" : ""} />
+          </Link>
+        </FooterItem>
+        <FooterItem>
+          <Link to="/login">
+            <UserOutlined className={active === 2 ? "active" : ""} />
+          </Link>
+        </FooterItem>
+      </FooterList>
     </FooterBox>
   );
 };
 
 const FooterBox = styled.div`
-  padding: 50px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 50px;
 `;
 
-const FooterToggleIcon = styled(PlusOutlined)`
-  width: 65px;
-  height: 65px;
-  border-radius: 100%;
+const FooterList = styled.ul`
+  padding: 0 20px;
+  box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  background: rgb(101, 136, 247);
-  color: #fff;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 `;
 
-Footer.Icon = FooterToggleIcon;
+const FooterItem = styled.li`
+  font-size: 1.6rem;
+  color: #888;
+  &:hover {
+    color: rgb(101, 136, 247);
+  }
+  .active {
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-14px);
+    padding: 8px;
+    border-radius: 100%;
+    color: #fff;
+    background: rgb(101, 136, 247);
+  }
+`;
 
 export default Footer;

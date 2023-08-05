@@ -1,6 +1,7 @@
 import Layout from "../layout/Layout";
 import RegisterContainer from "../container/RegisterContainer";
 import Header from "../layout/Header/Header";
+import Footer from "../layout/Footer";
 
 const Register = () => {
   return (
@@ -9,6 +10,7 @@ const Register = () => {
         <Header.Nav />
       </Header>
       <RegisterContainer />
+      <Footer />
     </Layout>
   );
 };

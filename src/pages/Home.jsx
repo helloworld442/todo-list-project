@@ -11,9 +11,7 @@ const Home = () => {
         <Header.Desc />
       </Header>
       <TodoListContainer />
-      <Footer>
-        <Footer.Icon />
-      </Footer>
+      <Footer />
     </Layout>
   );
 };

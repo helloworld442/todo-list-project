@@ -11,6 +11,8 @@ import {
   HeaderTitleText,
 } from "./style";
 import { HomeOutlined, LeftOutlined } from "@ant-design/icons";
+import { useRecoilState } from "recoil";
+import { dateButton } from "../../recoil/atom";
 
 const Header = ({ children }) => {
   return <HeaderCol>{children}</HeaderCol>;
@@ -27,24 +29,24 @@ const HeaderTitle = () => {
 
 const HeaderDescription = () => {
   const dates = ["S", "M", "T", "W", "T", "F", "S"];
-  const [position, setPosition] = useState({ left: 0 });
+  const distances = [-2, 52, 107, 163, 221, 280, 338];
+  const [index, setIndex] = useRecoilState(dateButton);
 
-  const onMoveButton = (e) => {
-    const buttonRect = e.target.getBoundingClientRect();
-    setPosition({ left: buttonRect.right });
+  const onToggleButton = (idx) => {
+    setIndex(idx);
   };
 
   return (
     <HeaderDescBox>
       <HeaderDescList>
         {dates.map((date, idx) => (
-          <HeaderDescItem key={idx} onClick={onMoveButton}>
+          <HeaderDescItem key={idx} onClick={() => onToggleButton(idx)}>
             <span className="date-day">{date}</span>
             <span className="date-num">{6 + idx}</span>
           </HeaderDescItem>
         ))}
       </HeaderDescList>
-      <HeaderDesToggle position={position} />
+      <HeaderDesToggle distance={distances[index]} />
     </HeaderDescBox>
   );
 };
