@@ -1,5 +1,5 @@
 import { keyframes, styled } from "styled-components";
-import { StTodoItem, StTodoList, TodoItemIcon, TodoItemText } from "./style";
+import { StTodoItem, StTodoList, TodoItemCheckBox, TodoItemIcon, TodoItemText } from "./style";
 
 const MockTodoItem = () => {
   return (
@@ -18,6 +18,7 @@ const Skeleton = () => {
     <SkeletonItem>
       <SkeletonIcon />
       <SkeletonText />
+      <SkeletonCheckBox />
     </SkeletonItem>
   );
 };
@@ -41,14 +42,21 @@ const SkeletonList = styled(StTodoList)``;
 const SkeletonItem = styled(StTodoItem)``;
 
 const SkeletonIcon = styled(TodoItemIcon)`
-  animation: ${blinkAnimation} 1.5s linear infinite; // 회전 애니메이션 적용
+  animation: ${blinkAnimation} 1.5s linear infinite;
 `;
 
 const SkeletonText = styled(TodoItemText)`
-  width: 300px;
+  width: 250px;
   height: 40px;
   border-radius: 5px;
-  animation: ${blinkAnimation} 1.5s linear infinite; // 회전 애니메이션 적용
+  animation: ${blinkAnimation} 1.5s linear infinite;
+`;
+
+const SkeletonCheckBox = styled(TodoItemCheckBox)`
+  width: 24px;
+  height: 24px;
+  border: none;
+  animation: ${blinkAnimation} 1.5s linear infinite;
 `;
 
 export default MockTodoItem;

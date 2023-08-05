@@ -48,8 +48,8 @@ export const TodoItemCheckBox = styled.input.attrs({ type: "checkbox" })`
   position: absolute;
   top: 50%;
   right: 0;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border: 2px solid #aaa;
   transform: translateY(-75%);
   &:checked {
