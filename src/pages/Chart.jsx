@@ -1,6 +1,6 @@
 import Layout from "../layout/Layout";
-import Footer from "../layout/Footer";
 import Header from "../layout/Header/Header";
+import Footer from "../layout/Footer";
 
 const Chart = () => {
   return (
