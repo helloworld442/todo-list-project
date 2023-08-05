@@ -93,6 +93,6 @@ export const HeaderNavBox = styled.div`
     transition: all 0.3s ease-in-out;
   }
   a:hover {
-    color: #333;
+    color: rgb(101, 136, 247);
   }
 `;

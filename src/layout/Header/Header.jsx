@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import {
   HeaderCol,
   HeaderDesToggle,
@@ -29,7 +28,7 @@ const HeaderTitle = () => {
 
 const HeaderDescription = () => {
   const dates = ["S", "M", "T", "W", "T", "F", "S"];
-  const distances = [0, 52, 107, 163, 222, 280, 338];
+  const distances = [-2, 52, 107, 163, 222, 280, 338];
   const [index, setIndex] = useRecoilState(dateButton);
 
   const onToggleButton = (idx) => {
