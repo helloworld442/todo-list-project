@@ -47,7 +47,7 @@ const SkeletonIcon = styled(TodoItemIcon)`
 
 const SkeletonText = styled(TodoItemText)`
   width: 250px;
-  height: 40px;
+  height: 30px;
   border-radius: 5px;
   animation: ${blinkAnimation} 1.5s linear infinite;
 `;
