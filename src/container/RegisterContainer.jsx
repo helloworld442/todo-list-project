@@ -44,9 +44,9 @@ const RegisterContainer = () => {
 
     if (usernameError || passwordError || emailError) {
       setErrors({
+        email: emailError,
         username: usernameError,
         password: passwordError,
-        email: emailError,
       });
       return;
     }
