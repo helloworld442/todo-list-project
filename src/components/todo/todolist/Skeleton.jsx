@@ -57,6 +57,9 @@ const SkeletonCheckBox = styled(TodoItemCheckBox)`
   height: 24px;
   border: none;
   animation: ${blinkAnimation} 1.5s linear infinite;
+  &:checked {
+    background: none;
+  }
 `;
 
 export default MockTodoItem;
