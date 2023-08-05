@@ -2,7 +2,7 @@ import { css, styled } from "styled-components";
 
 export const StTodoList = styled.ul`
   width: 100%;
-  height: 350px;
+  height: 400px;
   padding: 0 20px;
   padding-top: 50px;
   box-sizing: border-box;

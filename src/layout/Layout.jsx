@@ -6,6 +6,9 @@ const Layout = styled.div`
   height: 800px;
   margin: 0 auto;
   background: #fff;
+  @media screen and (max-width: 768px) {
+    height: 850px;
+  }
 `;
 
 export default Layout;

@@ -2,6 +2,7 @@ import { css, styled } from "styled-components";
 
 export const StInputBox = styled.div`
   width: 100%;
+  height: 80px;
   padding: 24px 0;
 `;
 

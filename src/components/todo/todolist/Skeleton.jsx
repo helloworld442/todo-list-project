@@ -8,6 +8,7 @@ const MockTodoItem = () => {
       <Skeleton />
       <Skeleton />
       <Skeleton />
+      <Skeleton />
     </SkeletonList>
   );
 };

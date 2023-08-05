@@ -61,7 +61,7 @@ const FooterList = styled.ul`
 `;
 
 const FooterItem = styled.li`
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #888;
   &:hover {
     color: rgb(101, 136, 247);

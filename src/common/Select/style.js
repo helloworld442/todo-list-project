@@ -1,8 +1,11 @@
 import { css, styled } from "styled-components";
 
 export const DropDownBox = styled.div`
+  position: relative;
   width: 100%;
+  height: 80px;
   padding: 24px 0;
+  z-index: 100;
 `;
 
 export const DropDownLabel = styled.label`
@@ -20,7 +23,7 @@ export const DropDownTrigger = styled.span`
 `;
 
 export const DropDownList = styled.ul`
-  position: relative;
+  position: absolute;
   width: 100%;
   min-height: 50px;
   padding: 12px;
@@ -30,10 +33,12 @@ export const DropDownList = styled.ul`
   border-radius: 8px;
   font-size: 1.2rem;
   color: #333;
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
+  z-index: 100;
   ${(props) =>
     props.error &&
     css`
@@ -51,6 +56,9 @@ export const DropDownItem = styled.li`
 `;
 
 export const DropDownErrorText = styled.span`
+  position: absolute;
+  bottom: 12px;
+  left: 0;
   font-size: 0.8rem;
   font-weight: 550;
   color: red;
