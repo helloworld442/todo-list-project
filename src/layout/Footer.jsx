@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 const Footer = () => {
   const { pathname } = useLocation();
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(null);
 
   useEffect(() => {
     switch (pathname) {
