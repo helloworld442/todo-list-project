@@ -1,6 +1,7 @@
 import { useQuery } from "react-query";
 import TodoList from "../components/todo/todolist/TodoList";
 import { getTodos } from "../api/todo";
+import MockTodoItem from "../components/todo/todolist/Skeleton";
 
 const TodoListContainer = () => {
   const { isLoading, isError, data } = useQuery("todos", getTodos, {
@@ -9,9 +10,9 @@ const TodoListContainer = () => {
     cacheTime: 60 * 1000,
   });
 
-  if (isLoading) return <div>로딩 중입니다 ...</div>;
+  if (isLoading) return <MockTodoItem />;
 
-  if (isError) return <div>에러 입니다 ...</div>;
+  if (isError) return <MockTodoItem />;
 
   return <TodoList todos={data.data} />;
 };
