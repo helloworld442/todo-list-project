@@ -5,7 +5,6 @@ export const DropDownBox = styled.div`
   width: 100%;
   height: 80px;
   padding: 24px 0;
-  z-index: 100;
 `;
 
 export const DropDownLabel = styled.label`

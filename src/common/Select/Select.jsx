@@ -25,7 +25,7 @@ const Select = ({ name, options, value, error, onChange }) => {
   const [active, setActive] = useState(false);
 
   const onToggleSelect = () => {
-    setActive(!active);
+    setActive(true);
   };
 
   const onClickSelect = (option) => {
