@@ -1,5 +1,5 @@
-import Button from "../../common/Button/Button";
-import InputBox from "../../common/Input/InputBox";
+import Button from "../../../common/Button/Button";
+import InputBox from "../../../common/Input/InputBox";
 import { AuthButtonLink, AuthCol, AuthForm } from "./style";
 
 const typeDict = {

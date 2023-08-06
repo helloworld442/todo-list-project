@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import Auth from "../components/auth/Auth";
+import Auth from "../components/user/auth/Auth";
 
 const RegisterContainer = () => {
   const [form, setForm] = useState({ email: "", username: "", password: "" });

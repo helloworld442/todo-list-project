@@ -1,6 +1,6 @@
 import Layout from "../layout/Layout";
 import Header from "../layout/Header/Header";
-import TodoChart from "../components/todo/todoChart/TodoChart";
+import TodoChart from "../components/todo/todochart/TodoChart";
 import Footer from "../layout/Footer";
 
 const Chart = () => {
