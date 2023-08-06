@@ -21,6 +21,7 @@ export const AuthButtonLink = styled.a`
   font-size: 1rem;
   font-weight: bold;
   text-decoration: underline;
+  color: #aaa;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &:hover {
