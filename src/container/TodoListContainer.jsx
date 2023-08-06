@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
-import TodoList from "../components/todo/todolist/TodoList";
 import { getTodos } from "../api/todo";
+import TodoList from "../components/todo/todolist/TodoList";
 import MockTodoItem from "../components/todo/todolist/Skeleton";
 
 const TodoListContainer = () => {
