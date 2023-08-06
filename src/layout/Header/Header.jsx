@@ -31,9 +31,7 @@ const HeaderDescription = () => {
   const distances = [-2, 52, 107, 163, 222, 280, 338];
   const [index, setIndex] = useRecoilState(dateButton);
 
-  const onToggleButton = (idx) => {
-    setIndex(idx);
-  };
+  const onToggleButton = (idx) => setIndex(idx);
 
   return (
     <HeaderDescBox>
