@@ -7,7 +7,8 @@ const Layout = styled.div`
   margin: 0 auto;
   background: #fff;
   @media screen and (max-width: 768px) {
-    height: 850px;
+    width: 100vw;
+    height: 100vh;
   }
 `;
 
