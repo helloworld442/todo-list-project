@@ -1,5 +1,5 @@
 import Layout from "../layout/Layout";
-import Header from "../layout/header/header.components";
+import Header from "../layout/header/Header.components";
 import Footer from "../layout/footer/footer.components";
 import { TodoFormContainer } from "../features/todo";
 

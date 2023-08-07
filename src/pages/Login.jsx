@@ -1,6 +1,6 @@
 import Layout from "../layout/Layout";
 import Footer from "../layout/footer/footer.components";
-import Header from "../layout/header/header.components";
+import Header from "../layout/header/Header.components";
 import { LoginContainer } from "../features/user";
 
 const Login = () => {
