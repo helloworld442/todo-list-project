@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 export const AuthCol = styled.div`
@@ -16,7 +17,7 @@ export const AuthForm = styled.form`
   box-sizing: border-box;
 `;
 
-export const AuthButtonLink = styled.a`
+export const AuthButtonLink = styled(Link)`
   padding-top: 24px;
   font-size: 1rem;
   font-weight: bold;

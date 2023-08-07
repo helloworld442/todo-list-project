@@ -47,7 +47,7 @@ const Auth = ({ type, form, errors, onInput, onSubmit }) => {
         />
         <Button>{typeDict[type]}</Button>
       </AuthForm>
-      <AuthButtonLink href={locationDict[type]}>{textDict[type]}</AuthButtonLink>
+      <AuthButtonLink to={locationDict[type]}>{textDict[type]}</AuthButtonLink>
     </AuthCol>
   );
 };
