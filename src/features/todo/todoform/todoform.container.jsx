@@ -54,17 +54,17 @@ const TodoFormContainer = () => {
     return "";
   };
 
-  const onChangeInput = (e) => {
+  const onChangeInput = useCallback((e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
 
-  const onChangeSelect = (target) => {
+  const onChangeSelect = useCallback((target) => {
     const { name, value } = target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
 
   const onSubmitTodo = (e) => {
     e.preventDefault();
