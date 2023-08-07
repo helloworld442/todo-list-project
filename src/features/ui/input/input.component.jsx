@@ -17,7 +17,7 @@ const inputDict = {
  * @param {Function} onChange 인풋의 값이 바뀔 때 호출되는 함수
  */
 
-const InputBox = memo(({ type, name, value, error, onChange }) => {
+const InputBox = ({ type, name, value, error, onChange }) => {
   return (
     <StInputBox>
       <StInputLabel>{inputDict[name]}</StInputLabel>
@@ -25,6 +25,6 @@ const InputBox = memo(({ type, name, value, error, onChange }) => {
       <StInputErrorText>{error}</StInputErrorText>
     </StInputBox>
   );
-});
+};
 
 export { InputBox };
