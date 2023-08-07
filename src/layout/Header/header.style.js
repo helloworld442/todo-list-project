@@ -21,7 +21,7 @@ export const HeaderTitleText = styled.span`
       display: block;
       font-size: 1rem;
       font-weight: bold;
-      color: #aaa;
+      color: #888;
     `}
   ${(props) =>
     props.size === "large" &&
@@ -29,7 +29,7 @@ export const HeaderTitleText = styled.span`
       display: block;
       font-size: 2.6rem;
       font-weight: 900;
-      color: #333;
+      color: #888;
     `}
 `;
 
