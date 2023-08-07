@@ -11,4 +11,4 @@ const Layout = styled.div`
   }
 `;
 
-export { Layout };
+export default Layout;
