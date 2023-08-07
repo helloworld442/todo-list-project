@@ -21,7 +21,7 @@ const selectDict = {
  * @param {Function} onChange 드롭창의 값이 바뀔 때 호출되는 함수
  */
 
-const Select = ({ name, options, value, error, onChange }) => {
+const Select = memo(({ name, options, value, error, onChange }) => {
   const [active, setActive] = useState(false);
 
   const onToggleSelect = () => {
@@ -50,6 +50,6 @@ const Select = ({ name, options, value, error, onChange }) => {
       <DropDownErrorText>{error}</DropDownErrorText>
     </DropDownBox>
   );
-};
+});
 
 export { Select };
