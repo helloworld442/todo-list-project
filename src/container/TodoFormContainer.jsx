@@ -32,7 +32,7 @@ const TodoFormContainer = () => {
 
   const validateTitle = (title) => {
     if (title.trim() === "") return "제목을 입력해주세요";
-    if (title.length > 15) return "제목의 길이는 (5~15)자로 맞춰주세요 ";
+    if (title.length > 15) return "제목의 길이는 (5~15)자로 맞춰주세요";
     if (title.length < 5) return "제목의 길이는 (5~15)자로 맞춰주세요";
     return "";
   };
