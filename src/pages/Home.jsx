@@ -1,6 +1,4 @@
-import Layout from "../layout/Layout";
-import Header from "../layout/header/header.components";
-import Footer from "../layout/footer/footer.components";
+import { Layout, Header, Footer } from "../layout";
 import { TodoListContainer } from "../features/todo";
 
 const Home = () => {

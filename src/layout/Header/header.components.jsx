@@ -67,4 +67,4 @@ Header.Title = HeaderTitle;
 Header.Desc = HeaderDescription;
 Header.Nav = HeaderNav;
 
-export default Header;
+export { Header };
