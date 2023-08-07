@@ -12,7 +12,7 @@ const locationDict = {
 };
 
 const textDict = {
-  login: "회원가입 페이지",
+  login: "회원가입 페이지 ",
   register: "로그인 페이지",
 };
 
