@@ -15,13 +15,6 @@ const TodoForm = ({ form, errors, onInput, onSelect, onSubmit }) => {
         error={errors.title}
         onChange={onInput}
       />
-      <InputBox
-        type="text"
-        name="content"
-        value={form.content}
-        error={errors.content}
-        onChange={onInput}
-      />
       <Select
         name="color"
         options={colorOptions}

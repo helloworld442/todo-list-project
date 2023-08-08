@@ -7,18 +7,8 @@ import TodoForm from "./todoform.component";
 const TodoFormContainer = () => {
   const navigateTo = useNavigate();
   const queryClient = useQueryClient();
-  const [form, setForm] = useState({
-    title: "",
-    content: "",
-    color: "",
-    date: "",
-  });
-  const [errors, setErrors] = useState({
-    title: "",
-    content: "",
-    color: "",
-    date: "",
-  });
+  const [form, setForm] = useState({ title: "", color: "", date: "" });
+  const [errors, setErrors] = useState({ title: "", color: "", date: "" });
 
   const todoMutation = useMutation(postTodo, {
     onSuccess: () => {
@@ -34,13 +24,6 @@ const TodoFormContainer = () => {
     if (title.trim() === "") return "제목을 입력해주세요";
     if (title.length > 15) return "제목의 길이는 (5~15)자로 맞춰주세요";
     if (title.length < 5) return "제목의 길이는 (5~15)자로 맞춰주세요";
-    return "";
-  };
-
-  const validateContent = (content) => {
-    if (content.trim() === "") return "내용을 입력하세요";
-    if (content.length > 30) return "내용의 길이는 (10~30)자로 맞춰주세요";
-    if (content.length < 10) return "내용의 길이는 (10~30)자로 맞춰주세요";
     return "";
   };
 
@@ -69,21 +52,19 @@ const TodoFormContainer = () => {
   const onSubmitTodo = (e) => {
     e.preventDefault();
     const titleError = validateTitle(form.title);
-    const contentError = validateContent(form.content);
     const colorError = validateColor(form.color);
     const dateError = validateDate(form.date);
 
-    if (titleError || contentError || colorError || dateError) {
+    if (titleError || colorError || dateError) {
       setErrors({
         title: titleError,
-        content: contentError,
         color: colorError,
         date: dateError,
       });
       return;
     }
     todoMutation.mutate(form);
-    setForm({ title: "", content: "", color: "", date: "" });
+    setForm({ title: "", color: "", date: "" });
   };
 
   if (todoMutation.isLoading) return <div>로딩 중입니다 ...</div>;

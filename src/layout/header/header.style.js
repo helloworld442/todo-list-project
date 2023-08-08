@@ -28,7 +28,7 @@ export const HeaderTitleText = styled.span`
     css`
       display: block;
       font-size: 2.6rem;
-      font-weight: 900;
+      font-weight: bold;
       color: #333;
     `}
 `;
