@@ -8,7 +8,7 @@ interface APIResponse<T> {
   timestamp: Date;
 }
 
-interface APITodoRequest {
+interface APIPostRequest {
   title: string;
   color: string;
   day: string;
@@ -20,7 +20,7 @@ const getTodos = async <T>(): Promise<APIResponse<T>> => {
   return response.data;
 };
 
-const postTodo = async <T>(req: APITodoRequest): Promise<APIResponse<T>> => {
+const postTodo = async <T>(req: APIPostRequest): Promise<APIResponse<T>> => {
   const response = await api.post<APIResponse<T>>("/todos", req);
   return response.data;
 };
