@@ -41,7 +41,11 @@ const TodoFormContainer = () => {
     const dateError = validateDate(form.date);
 
     if (titleError || colorError || dateError) {
-      setErrors({ title: titleError, color: colorError, date: dateError });
+      setErrors({
+        title: titleError,
+        color: colorError,
+        date: dateError,
+      });
       return;
     }
     setForm({ title: "", color: "", date: "" });
