@@ -6,7 +6,7 @@ import {
   DropDownLabel,
   DropDownList,
   DropDownTrigger,
-} from "./select.style";
+} from "./SelectStyle";
 
 const selectDict = {
   color: "COLOR",

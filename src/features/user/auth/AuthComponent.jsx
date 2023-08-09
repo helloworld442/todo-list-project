@@ -1,4 +1,4 @@
-import { AuthButtonLink, AuthCol, AuthForm } from "./auth.style";
+import { AuthButtonLink, AuthCol, AuthForm } from "./AuthStyle";
 import { InputBox, Button } from "../../ui";
 
 const typeDict = {

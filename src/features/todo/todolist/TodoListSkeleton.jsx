@@ -1,11 +1,11 @@
 import { keyframes, styled } from "styled-components";
 import {
-  StTodoItem,
-  StTodoList,
-  TodoItemCheckBox,
-  TodoItemIcon,
-  TodoItemText,
-} from "./todolist.style";
+  TodoListItemCheckBox,
+  TodoListItemIcon,
+  TodoListItemStyle,
+  TodoListItemText,
+  TodoListMenuStyle,
+} from "./TodoListStyle";
 
 const MockTodoItem = () => {
   return (
@@ -43,22 +43,22 @@ const blinkAnimation = keyframes`
     };
 `;
 
-const SkeletonList = styled(StTodoList)``;
+const SkeletonList = styled(TodoListMenuStyle)``;
 
-const SkeletonItem = styled(StTodoItem)``;
+const SkeletonItem = styled(TodoListItemStyle)``;
 
-const SkeletonIcon = styled(TodoItemIcon)`
+const SkeletonIcon = styled(TodoListItemIcon)`
   animation: ${blinkAnimation} 1.5s linear infinite;
 `;
 
-const SkeletonText = styled(TodoItemText)`
+const SkeletonText = styled(TodoListItemText)`
   width: 250px;
   height: 30px;
   border-radius: 5px;
   animation: ${blinkAnimation} 1.5s linear infinite;
 `;
 
-const SkeletonCheckBox = styled(TodoItemCheckBox)`
+const SkeletonCheckBox = styled(TodoListItemCheckBox)`
   width: 24px;
   height: 24px;
   border: none;

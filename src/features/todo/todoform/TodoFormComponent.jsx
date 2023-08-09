@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { StTodoForm } from "./todoform.style";
+import { StTodoForm } from "./TodoFormStyle";
 import { Button, InputBox, Select } from "../../ui";
 
 const TodoForm = ({ form, errors, onInput, onSelect, onSubmit }) => {

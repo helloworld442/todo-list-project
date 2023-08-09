@@ -1,3 +1,3 @@
-export * from "./todochart/todochart.container";
-export * from "./todoform/todoform.container";
-export * from "./todolist/todolist.container";
+export * from "./todochart/TodoChartContainer";
+export * from "./todoform/TodoFormContainer";
+export * from "./todolist/TodoListContainer";

@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import { postTodo } from "../../../api/todo";
 import { useNavigate } from "react-router-dom";
-import TodoForm from "./todoform.component";
+import TodoForm from "./TodoFormComponent";
 
 const TodoFormContainer = () => {
   const navigateTo = useNavigate();

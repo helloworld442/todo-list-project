@@ -1,15 +1,10 @@
-import Layout from "../layout/Layout";
-import Header from "../layout/header/header.components.jsx";
-import Footer from "../layout/footer/footer.components";
+import { Footer, Header, Layout } from "../layout";
 import { TodoListContainer } from "../features/todo";
 
 const Home = () => {
   return (
     <Layout>
-      <Header>
-        <Header.Title />
-        <Header.Desc />
-      </Header>
+      <Header />
       <TodoListContainer />
       <Footer />
     </Layout>

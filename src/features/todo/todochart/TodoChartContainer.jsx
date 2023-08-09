@@ -1,4 +1,4 @@
-import TodoChart from "./todochart.component";
+import TodoChart from "./TodoChartCompoent";
 
 const TodoChartContainer = () => {
   return <TodoChart />;

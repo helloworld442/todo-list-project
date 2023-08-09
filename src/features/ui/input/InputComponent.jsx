@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { StInput, StInputBox, StInputErrorText, StInputLabel } from "./input.style";
+import { StInput, StInputBox, StInputErrorText, StInputLabel } from "./InputStyle";
 
 const inputDict = {
   title: "TITLE",

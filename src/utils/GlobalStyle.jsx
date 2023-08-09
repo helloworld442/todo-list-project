@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         padding : 0;
         margin : 0;
-        background: rgb(101,136,247);
+        background: ${(props) => props.theme.baseColor};
     }
 
     a {

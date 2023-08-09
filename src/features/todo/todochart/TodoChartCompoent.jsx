@@ -4,7 +4,7 @@ import {
   TodoChartText,
   TodoLineChartBox,
   TodoRadarChartBox,
-} from "./todochart.style";
+} from "./TodoChartStyle";
 import ReactApexChart from "react-apexcharts";
 
 const dates = ["SUN", "MON", "THE", "WEN", "THR", "FRI", "SAT"];
