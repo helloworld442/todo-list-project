@@ -2,8 +2,8 @@ import { useCallback, useState } from "react";
 import TodoForm from "./TodoFormComponent";
 
 const TodoFormContainer = () => {
-  const [form, setForm] = useState({ title: "", color: "" });
-  const [errors, setErrors] = useState({ title: "", color: "" });
+  const [form, setForm] = useState({ title: "", color: "", date: "" });
+  const [errors, setErrors] = useState({ title: "", color: "", date: "" });
 
   const validateTitle = (title: string) => {
     if (title.trim() === "") return "제목을 입력해주세요";
@@ -14,6 +14,11 @@ const TodoFormContainer = () => {
 
   const validateColor = (color: string) => {
     if (color.trim() === "") return "색상을 입력해주세요";
+    return "";
+  };
+
+  const validateDate = (date: string) => {
+    if (date.trim() === "") return "시간을 입력해주세요";
     return "";
   };
 
@@ -33,12 +38,13 @@ const TodoFormContainer = () => {
     e.preventDefault();
     const titleError = validateTitle(form.title);
     const colorError = validateColor(form.color);
+    const dateError = validateDate(form.date);
 
-    if (titleError || colorError) {
-      setErrors({ title: titleError, color: colorError });
+    if (titleError || colorError || dateError) {
+      setErrors({ title: titleError, color: colorError, date: dateError });
       return;
     }
-    setForm({ title: "", color: "" });
+    setForm({ title: "", color: "", date: "" });
   };
 
   return (

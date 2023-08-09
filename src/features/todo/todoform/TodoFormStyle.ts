@@ -6,5 +6,5 @@ export const TodoFormStyle = styled.form`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 24px;
 `;

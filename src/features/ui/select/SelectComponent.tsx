@@ -11,6 +11,7 @@ import { SelectProps } from "./SelctInterface";
 
 const Select = memo(({ name, options, value, error, onChange }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const onOpenSelect = () => {
     setIsOpen(true);
     onChange({ name, value: "" });
@@ -29,7 +30,7 @@ const Select = memo(({ name, options, value, error, onChange }: SelectProps) => 
       </DropDownTrigger>
       {isOpen && (
         <DropDownMenu>
-          {options?.map((option, index) => (
+          {options.map((option, index) => (
             <DropDownItem key={index} onClick={() => onDownSelect(option)}>
               {option}
             </DropDownItem>

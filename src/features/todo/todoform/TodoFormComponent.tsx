@@ -5,6 +5,7 @@ import { TodoFormProps } from "./TodoFormInterface";
 
 const TodoForm = ({ form, errors, onInput, onSelect, onSubmit }: TodoFormProps) => {
   const colorOptions = useMemo(() => ["tomato", "skyblue", "yellowgreen", "purple"], []);
+  const dateOptions = useMemo(() => ["SUN", "MON", "THU", "WEN", "THR", "FRI", "SUN"], []);
 
   return (
     <TodoFormStyle onSubmit={onSubmit}>
@@ -20,6 +21,13 @@ const TodoForm = ({ form, errors, onInput, onSelect, onSubmit }: TodoFormProps) 
         value={form.color}
         error={errors.color}
         options={colorOptions}
+        onChange={onSelect}
+      />
+      <Select
+        name="date"
+        value={form.date}
+        error={errors.date}
+        options={dateOptions}
         onChange={onSelect}
       />
       <Button>Add</Button>

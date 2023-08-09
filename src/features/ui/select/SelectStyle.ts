@@ -9,7 +9,7 @@ export const DropDownBox = styled.div`
 `;
 
 export const DropDownLabel = styled.label`
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #aaa;
 `;

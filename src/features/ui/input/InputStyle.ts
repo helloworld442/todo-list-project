@@ -29,7 +29,7 @@ export const InputStyle = styled.input<InputBoxProps>`
 `;
 
 export const InputLabel = styled.label`
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: #aaa;
 `;
