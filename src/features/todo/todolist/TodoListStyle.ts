@@ -70,7 +70,18 @@ export const TodoListToggleIcon = styled.div`
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  background: rgb(101, 136, 247);
+  background: ${(props) => props.theme.baseColor};
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s;
 `;
 
 export const TodoListMenuStyle = styled.ul`
