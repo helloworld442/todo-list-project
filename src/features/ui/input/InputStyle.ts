@@ -4,6 +4,7 @@ import { InputBoxProps } from "./InputInterface";
 export const InputBoxStyle = styled.div`
   width: 100%;
   height: 80px;
+  padding-bottom: 24px;
 `;
 
 export const InputStyle = styled.input<InputBoxProps>`

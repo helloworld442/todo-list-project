@@ -5,7 +5,7 @@ export const DropDownBox = styled.div`
   position: relative;
   width: 100%;
   height: 80px;
-  padding: 24px 0;
+  padding-bottom: 24px;
 `;
 
 export const DropDownLabel = styled.label`
@@ -58,6 +58,17 @@ export const DropDownItem = styled.li`
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+`;
+
+export const DropDownBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #d3d3d3;
+  z-index: 100;
+  opacity: 0.2;
 `;
 
 export const DropDownErrorText = styled.span`

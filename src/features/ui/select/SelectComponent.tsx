@@ -1,5 +1,6 @@
 import { memo, useState } from "react";
 import {
+  DropDownBackground,
   DropDownBox,
   DropDownErrorText,
   DropDownItem,
@@ -29,13 +30,16 @@ const Select = memo(({ name, options, value, error, onChange }: SelectProps) => 
         {value || "chose option"}
       </DropDownTrigger>
       {isOpen && (
-        <DropDownMenu>
-          {options.map((option, index) => (
-            <DropDownItem key={index} onClick={() => onDownSelect(option)}>
-              {option}
-            </DropDownItem>
-          ))}
-        </DropDownMenu>
+        <>
+          <DropDownBackground onClick={() => onDownSelect("")} />
+          <DropDownMenu>
+            {options.map((option, index) => (
+              <DropDownItem key={index} onClick={() => onDownSelect(option)}>
+                {option}
+              </DropDownItem>
+            ))}
+          </DropDownMenu>
+        </>
       )}
       <DropDownErrorText>{error}</DropDownErrorText>
     </DropDownBox>
