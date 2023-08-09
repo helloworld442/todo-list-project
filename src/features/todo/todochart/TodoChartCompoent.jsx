@@ -9,14 +9,8 @@ import ReactApexChart from "react-apexcharts";
 
 const dates = ["SUN", "MON", "THE", "WEN", "THR", "FRI", "SAT"];
 
-const TodoChart = () => {
-  return (
-    <TodoChartBox>
-      <TodoLineChart />
-      <TodoBarChart />
-      <TodoRadarChart />
-    </TodoChartBox>
-  );
+const TodoChart = ({ children }) => {
+  return <TodoChartBox>{children}</TodoChartBox>;
 };
 
 const TodoLineChart = () => {
@@ -75,5 +69,9 @@ const TodoRadarChart = () => {
     </TodoRadarChartBox>
   );
 };
+
+TodoChart.Line = TodoLineChart;
+TodoChart.Bar = TodoBarChart;
+TodoChart.Radar = TodoRadarChart;
 
 export default TodoChart;
