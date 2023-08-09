@@ -70,6 +70,17 @@ export const TodoListToggleIcon = styled.div`
   height: 14px;
   border-radius: 100%;
   background: rgb(101, 136, 247);
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s;
 `;
 
 export const TodoListMenuStyle = styled.ul`
@@ -123,7 +134,7 @@ export const TodoListItemCheckBox = styled.input.attrs({ type: "checkbox" })`
   width: 20px;
   height: 20px;
   border: 2px solid #aaa;
-  transform: translateY(-50%);
+  transform: translateY(-75%);
   &:checked {
     border-color: transparent;
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
