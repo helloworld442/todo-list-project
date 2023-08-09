@@ -11,7 +11,6 @@ import { SelectProps } from "./SelctInterface";
 
 const Select = memo(({ name, options, value, error, onChange }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log("HELLO WOLRD!");
   const onOpenSelect = () => {
     setIsOpen(true);
     onChange({ name, value: "" });
