@@ -24,4 +24,4 @@ Button.defaultProps = {
   height: "50px",
 };
 
-export default Button;
+export { Button };

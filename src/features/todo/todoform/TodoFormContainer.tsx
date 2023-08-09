@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import TodoForm from "./TodoFormComponent";
 
 const TodoFormContainer = () => {
-  const [form, setForm] = useState({ title: "" });
-  const [errors, setErrors] = useState({ title: "" });
+  const [form, setForm] = useState({ title: "", color: "" });
+  const [errors, setErrors] = useState({ title: "", color: "" });
 
   const validateTitle = (title: string) => {
     if (title.trim() === "") return "제목을 입력해주세요";
@@ -12,23 +12,44 @@ const TodoFormContainer = () => {
     return "";
   };
 
-  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const validateColor = (color: string) => {
+    if (color.trim() === "") return "색상을 입력해주세요";
+    return "";
+  };
+
+  const onChangeInput = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-  };
+  }, []);
+
+  const onChangeSelect = useCallback((target: { name: string; value: string }) => {
+    const { name, value } = target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
+  }, []);
 
   const onSubmitTodo = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const titleError = validateTitle(form.title);
-    if (titleError) {
-      setErrors({ title: titleError });
+    const colorError = validateColor(form.color);
+
+    if (titleError || colorError) {
+      setErrors({ title: titleError, color: colorError });
       return;
     }
-    setForm({ title: "" });
+    setForm({ title: "", color: "" });
   };
 
-  return <TodoForm form={form} errors={errors} onInput={onChangeInput} onSubmit={onSubmitTodo} />;
+  return (
+    <TodoForm
+      form={form}
+      errors={errors}
+      onInput={onChangeInput}
+      onSelect={onChangeSelect}
+      onSubmit={onSubmitTodo}
+    />
+  );
 };
 
 export { TodoFormContainer };
