@@ -3,7 +3,7 @@ import { Button, InputBox, Select } from "../../ui";
 import { TodoFormStyle } from "./TodoFormStyle";
 import { TodoFormProps } from "./TodoFormInterface";
 
-const TodoForm = ({ form, errors, onInput, onSelect, onSubmit }: TodoFormProps) => {
+const TodoFormComponent = ({ form, errors, onInput, onSelect, onSubmit }: TodoFormProps) => {
   const colorOptions = useMemo(() => ["tomato", "skyblue", "yellowgreen", "purple"], []);
   const dateOptions = useMemo(() => ["SUN", "MON", "THU", "WEN", "THR", "FRI", "SUN"], []);
 
@@ -35,4 +35,4 @@ const TodoForm = ({ form, errors, onInput, onSelect, onSubmit }: TodoFormProps) 
   );
 };
 
-export default TodoForm;
+export default TodoFormComponent;

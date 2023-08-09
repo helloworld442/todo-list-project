@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import TodoForm from "./TodoFormComponent";
+import TodoFormComponent from "./TodoFormComponent";
 
 const TodoFormContainer = () => {
   const [form, setForm] = useState({ title: "", color: "", date: "" });
@@ -48,7 +48,7 @@ const TodoFormContainer = () => {
   };
 
   return (
-    <TodoForm
+    <TodoFormComponent
       form={form}
       errors={errors}
       onInput={onChangeInput}
