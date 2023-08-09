@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-export type TodoListType = {
+export interface TodoListProps {
   children: ReactNode;
-};
+}
 
-export type TodoListTitleType = {
+export interface TodoListTitleProps {
   size: string;
-};
+}

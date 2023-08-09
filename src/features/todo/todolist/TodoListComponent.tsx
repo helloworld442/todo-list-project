@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TodoListType } from "./TodoListTypes";
+import { TodoListProps } from "./TodoListInterface";
 import {
   TodoListCol,
   TodoListItemCheckBox,
@@ -14,7 +14,7 @@ import {
   TodoListToggleMenu,
 } from "./TodoListStyle";
 
-const TodoList = ({ children }: TodoListType) => {
+const TodoList = ({ children }: TodoListProps) => {
   return <TodoListCol>{children}</TodoListCol>;
 };
 
@@ -46,7 +46,7 @@ const TodoListToggle = () => {
   );
 };
 
-const TodoListMenu = ({ children }: TodoListType) => {
+const TodoListMenu = ({ children }: TodoListProps) => {
   return <TodoListMenuStyle>{children}</TodoListMenuStyle>;
 };
 

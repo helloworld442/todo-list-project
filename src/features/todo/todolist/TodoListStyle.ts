@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { TodoListTitleType } from "./TodoListTypes";
+import { TodoListTitleProps } from "./TodoListInterface";
 
 export const TodoListCol = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ export const TodoListTitleBox = styled.div`
   box-sizing: border-box;
 `;
 
-export const TodoListTitleText = styled.span<TodoListTitleType>`
+export const TodoListTitleText = styled.span<TodoListTitleProps>`
   ${(props) =>
     props.size === "small" &&
     css`
