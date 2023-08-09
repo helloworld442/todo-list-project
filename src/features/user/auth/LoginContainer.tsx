@@ -5,6 +5,8 @@ const LoginContainer = () => {
   const [form, setForm] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState({ username: "", password: "" });
 
+  console.log("asfasdf");
+
   const validateUsername = (username: string) => {
     if (username.trim() === "") return "유저 이름을 입력해주세요";
     if (username.length > 15) return "유저 이름의 길이는 (5~15)자로 맞춰주세요";
