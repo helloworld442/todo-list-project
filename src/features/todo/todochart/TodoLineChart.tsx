@@ -61,7 +61,7 @@ const TodoLineChart = ({ data }: ChartProps) => {
       .transition()
       .duration(1000) // 애니메이션 지속 시간 (1초)
       .attr("d", endline);
-  }, []);
+  }, [data]);
 
   return (
     <TodoLineChartBox>
