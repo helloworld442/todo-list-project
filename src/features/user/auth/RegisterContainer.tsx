@@ -3,11 +3,7 @@ import RegisterComponent from "./RegisterComponent";
 
 const RegisterContainer = () => {
   const [form, setForm] = useState({ email: "", username: "", password: "" });
-  const [errors, setErrors] = useState({
-    email: "",
-    username: "",
-    password: "",
-  });
+  const [errors, setErrors] = useState({ email: "", username: "", password: "" });
 
   const validateUsername = (username: string) => {
     const usernameRegex = /^[a-zA-Z0-9_-]+$/;
