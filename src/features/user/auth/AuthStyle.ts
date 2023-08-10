@@ -1,4 +1,3 @@
-import { memo } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -21,7 +20,7 @@ export const AuthForm = styled.form`
   gap: 36px;
 `;
 
-export const AuthButtonLink = memo(styled(Link)`
+export const AuthButtonLink = styled(Link)`
   padding-top: 24px;
   font-size: 1rem;
   font-weight: bold;
@@ -32,4 +31,4 @@ export const AuthButtonLink = memo(styled(Link)`
   &:hover {
     color: rgb(101, 136, 247);
   }
-`);
+`;
