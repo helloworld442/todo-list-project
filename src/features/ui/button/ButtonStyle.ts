@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { ButtonProps } from "./ButtonInterface";
 
 export const StButton = styled.button<ButtonProps>`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+  width: ${(props) => props.width || "100%"};
+  height: ${(props) => props.height || "50px"};
   border: none;
   outline: none;
   border-radius: 8px;
