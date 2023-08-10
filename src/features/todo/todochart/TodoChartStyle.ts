@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const TodoChartBox = styled.div`
   width: 100%;
-  height: 700px;
+  max-height: 700px;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 36px;
-  overflow-y: scroll;
 `;
 
 export const TodoBarChartBox = styled.div`
@@ -49,6 +49,30 @@ export const TodoBarChartBox = styled.div`
 `;
 
 export const TodoLineChartBox = styled.div`
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  svg {
+    border: 5px solid ${(props) => props.theme.baseColor};
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+
+  .x-axis {
+    font-size: 0.8rem;
+  }
+
+  .y-axis {
+    font-size: 0.8rem;
+  }
+
+  .domain {
+    stroke-width: 2;
+    stroke: #888;
+  }
+`;
+
+export const TodoPieChartBox = styled.div`
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
