@@ -7,8 +7,6 @@ const TodoChartDesc = ({ data }: ChartProps) => {
   const maxTodoLabel = data.find((item) => item.value === maxTodoValue)?.label;
   const minTodoLabel = data.find((item) => item.value === minTodoValue)?.label;
 
-  console.log("asfsdaf");
-
   return (
     <TodoChartDescBox>
       <TodoChartDescProfile />
