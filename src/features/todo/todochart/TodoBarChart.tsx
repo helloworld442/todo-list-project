@@ -52,7 +52,6 @@ const TodoBarChart = ({ data }: ChartProps) => {
       // 애니메이션 추가
       .transition()
       .duration(1000) // 애니메이션 지속 시간 (1초)
-      .delay((d, i) => i * 200) // 각 막대별 애니메이션 지연 시간
       .attr("y", (d) => y(d.value))
       .attr("height", (d) => height - y(d.value));
 
@@ -67,7 +66,6 @@ const TodoBarChart = ({ data }: ChartProps) => {
       .text((d) => d.value)
       .transition()
       .duration(1000)
-      .delay((d, i) => i * 200)
       .attr("y", (d) => y(d.value) - 5); // 약간 위에 표시
   }, [data]);
 

@@ -29,7 +29,6 @@ const TodoLineChart = ({ data }: ChartProps) => {
 
     const y = d3
       .scaleLinear()
-
       .domain([0, d3.max(data, (d) => d.value) || 0])
       .range([height, 0]);
 
@@ -44,7 +43,7 @@ const TodoLineChart = ({ data }: ChartProps) => {
       .line<DataPoint>()
       .curve(d3.curveBasis)
       .x((d) => x(d.label)! + x.bandwidth() / 2)
-      .y((d) => y(0));
+      .y(y(0));
 
     const endline = d3
       .line<DataPoint>()
