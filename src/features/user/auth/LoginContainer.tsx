@@ -40,13 +40,7 @@ const LoginContainer = () => {
   };
 
   return (
-    <LoginComponent
-      type="login"
-      form={form}
-      errors={errors}
-      onInput={onChangeInput}
-      onSubmit={onSubmitInput}
-    />
+    <LoginComponent form={form} errors={errors} onInput={onChangeInput} onSubmit={onSubmitInput} />
   );
 };
 

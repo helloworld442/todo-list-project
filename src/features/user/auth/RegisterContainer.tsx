@@ -59,7 +59,6 @@ const RegisterContainer = () => {
   };
   return (
     <RegisterComponent
-      type="register"
       form={form}
       errors={errors}
       onInput={onChangeInput}
