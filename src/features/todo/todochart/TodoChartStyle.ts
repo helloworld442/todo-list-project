@@ -110,22 +110,22 @@ export const TodoChartDescContent = styled.div`
 
   #profile-max {
     margin-top: 12px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #888;
     span {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: ${(props) => props.theme.baseColor};
     }
   }
 
   #profile-min {
     margin-top: 12px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: bold;
     color: #888;
     span {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: tomato;
     }
   }
