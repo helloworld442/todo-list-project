@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const TodoChartBox = styled.div`
   width: 100%;
-  max-height: 700px;
+  max-height: 650px;
+  padding: 20px 0;
+  box-sizing: border-box;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -72,26 +74,20 @@ export const TodoLineChartBox = styled.div`
   }
 `;
 
-export const TodoPieChartBox = styled.div`
+export const TodoTableChartBox = styled.div`
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
-  svg {
+  table {
+    width: 100%;
+    padding: 10px;
     border: 5px solid ${(props) => props.theme.baseColor};
     border-radius: 15px;
     box-sizing: border-box;
   }
-
-  .x-axis {
-    font-size: 0.8rem;
-  }
-
-  .y-axis {
-    font-size: 0.8rem;
-  }
-
-  .domain {
-    stroke-width: 2;
-    stroke: #888;
+  thead {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: ${(props) => props.theme.baseColor};
   }
 `;
