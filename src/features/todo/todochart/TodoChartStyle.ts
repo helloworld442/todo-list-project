@@ -16,7 +16,7 @@ export const TodoBarChartBox = styled.div`
   padding: 0 20px;
   box-sizing: border-box;
   svg {
-    border: 5px solid ${(props) => props.theme.baseColor};
+    border: 3px solid ${(props) => props.theme.baseColor};
     border-radius: 15px;
     box-sizing: border-box;
   }
@@ -55,7 +55,7 @@ export const TodoLineChartBox = styled.div`
   padding: 0 20px;
   box-sizing: border-box;
   svg {
-    border: 5px solid ${(props) => props.theme.baseColor};
+    border: 3px solid ${(props) => props.theme.baseColor};
     border-radius: 15px;
     box-sizing: border-box;
   }
