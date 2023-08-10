@@ -5,7 +5,7 @@ import { TodoLineChartBox } from "./TodoChartStyle";
 
 const TodoLineChart = ({ data }: ChartProps) => {
   const chartRef = useRef<SVGSVGElement | null>(null);
-
+  console.log("HELLO WORLD");
   useEffect(() => {
     if (!chartRef.current) return;
 
