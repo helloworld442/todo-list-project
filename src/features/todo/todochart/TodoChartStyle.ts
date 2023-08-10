@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const TodoChartBox = styled.div`
   width: 100%;
   max-height: 650px;
-  padding: 20px 0;
+  padding-bottom: 20px;
   box-sizing: border-box;
   overflow-y: scroll;
   display: flex;
@@ -74,20 +74,59 @@ export const TodoLineChartBox = styled.div`
   }
 `;
 
-export const TodoTableChartBox = styled.div`
+export const TodoChartDescBox = styled.div`
+  position: relative;
   width: 100%;
-  padding: 0 20px;
+  padding-top: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
-  table {
-    width: 100%;
-    padding: 10px;
-    border: 5px solid ${(props) => props.theme.baseColor};
-    border-radius: 15px;
-    box-sizing: border-box;
-  }
-  thead {
-    font-size: 1.1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+`;
+
+export const TodoChartDescProfile = styled.div`
+  width: 100px;
+  height: 100px;
+  margin-right: 24px;
+  border-radius: 100%;
+  background: #d3d3d3;
+`;
+
+export const TodoChartDescContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  #profile-name {
+    margin-top: 6px;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: ${(props) => props.theme.baseColor};
+    color: #888;
+    span {
+      font-size: 1.2rem;
+      color: #333;
+    }
+  }
+
+  #profile-max {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #888;
+    span {
+      font-size: 1.2rem;
+      color: ${(props) => props.theme.baseColor};
+    }
+  }
+
+  #profile-min {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #888;
+    span {
+      font-size: 1.2rem;
+      color: tomato;
+    }
   }
 `;
