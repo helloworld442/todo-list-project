@@ -14,7 +14,7 @@ import {
   TodoListToggleMenu,
 } from "./TodoListStyle";
 
-const TodoList = ({ children }: TodoListProps) => {
+const TodoListComponent = ({ children }: TodoListProps) => {
   return <TodoListCol>{children}</TodoListCol>;
 };
 
@@ -64,9 +64,9 @@ const TodoListItem = () => {
   );
 };
 
-TodoList.Title = TodoListTitle;
-TodoList.Toggle = TodoListToggle;
-TodoList.Menu = TodoListMenu;
-TodoList.Item = TodoListItem;
+TodoListComponent.Title = TodoListTitle;
+TodoListComponent.Toggle = TodoListToggle;
+TodoListComponent.Menu = TodoListMenu;
+TodoListComponent.Item = TodoListItem;
 
-export default TodoList;
+export default TodoListComponent;
