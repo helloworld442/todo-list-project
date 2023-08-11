@@ -89,7 +89,7 @@ export const TodoChartDescBox = styled.div`
 export const TodoChartDescProfile = styled.div`
   width: 100px;
   height: 100px;
-  margin-right: 24px;
+  margin-right: 20px;
   border-radius: 100%;
   background: #d3d3d3;
 `;
@@ -99,33 +99,33 @@ export const TodoChartDescContent = styled.div`
   flex-direction: column;
   #profile-name {
     margin-top: 6px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #888;
     span {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       color: #333;
     }
   }
 
   #profile-max {
     margin-top: 12px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #888;
     span {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: ${(props) => props.theme.baseColor};
     }
   }
 
   #profile-min {
     margin-top: 12px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #888;
     span {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: tomato;
     }
   }
