@@ -1,4 +1,4 @@
-import TodoTitleField from "../../molecules/TodoField/TodoTItleField";
+import TodoTitleField from "../../molecules/TodoTItleField";
 
 const TodoTitleOrganism = () => {
   const subTitle = "Friday,May 11";

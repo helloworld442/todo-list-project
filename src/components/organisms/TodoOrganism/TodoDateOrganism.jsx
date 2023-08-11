@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import TodoDateField from "../../molecules/TodoField/TodoDateField";
+import TodoDateField from "../../molecules/TodoDateField";
 
 const TodoDateOrganism = () => {
   const dates = [

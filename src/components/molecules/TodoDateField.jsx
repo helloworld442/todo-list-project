@@ -1,10 +1,6 @@
 import { styled } from "styled-components";
 import { useState } from "react";
-import {
-  TodoDateIcomText,
-  TodoDateLabelText,
-  TodoDateValueText,
-} from "../../atom/Text/TodoText/TodoDateText";
+import { TodoDateIcomText, TodoDateLabelText, TodoDateValueText } from "../atom/Text/TodoDateText";
 
 const TodoDateField = ({ label, value }) => {
   const [active, setActive] = useState(false);

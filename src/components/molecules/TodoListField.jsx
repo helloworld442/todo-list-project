@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 import { useState } from "react";
-import { TodoListIconText, TodoListTitleText } from "../../atom/Text/TodoText/TodoListText";
-import { TodoListCheckBox } from "../../atom/Input/TodoInput/TodoListInput";
+import { TodoListIconText, TodoListTitleText } from "../atom/Text/TodoListText";
+import { TodoListCheckBox } from "../atom/Input/TodoListInput";
 
 const TodoListField = ({ title, color }) => {
   const [active, setActive] = useState(false);

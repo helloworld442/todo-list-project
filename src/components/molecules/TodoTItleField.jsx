@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { TodoMainTitleText, TodoSubTitleText } from "../../atom/Text/TodoText/TodoTitleText";
+import { TodoMainTitleText, TodoSubTitleText } from "../atom/Text/TodoTitleText";
 
 const TodoTitleField = ({ subTitle, mainTitle }) => {
   return (
