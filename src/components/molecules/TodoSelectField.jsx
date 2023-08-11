@@ -23,13 +23,16 @@ const TodoSelectField = ({ name, options, value, error, onChange }) => {
         {value || "chose option"}
       </TodoSelectTrigger>
       {isOpen && (
-        <TodoSelectMenu>
-          {options.map((option, index) => (
-            <TodoSelectItem key={index} onClick={() => onDonwSelect(option)}>
-              {option}
-            </TodoSelectItem>
-          ))}
-        </TodoSelectMenu>
+        <>
+          <TodoSelectBackground onClick={() => onDonwSelect("")} />
+          <TodoSelectMenu>
+            {options.map((option, index) => (
+              <TodoSelectItem key={index} onClick={() => onDonwSelect(option)}>
+                {option}
+              </TodoSelectItem>
+            ))}
+          </TodoSelectMenu>
+        </>
       )}
       <TodoSelectErrortext>{error}</TodoSelectErrortext>
     </TodoSelectFieldStyle>
@@ -64,6 +67,17 @@ const TodoSelectItem = styled.li`
   font-size: 1.2rem;
   font-weight: bold;
   cursor: pointer;
+`;
+
+export const TodoSelectBackground = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #d3d3d3;
+  z-index: 100;
+  opacity: 0.2;
 `;
 
 export default TodoSelectField;
