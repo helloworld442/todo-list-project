@@ -19,7 +19,7 @@ export const TodoListTitleText = styled.span<TodoListTitleProps>`
       margin-bottom: 14px;
       display: block;
       font-size: 1.1rem;
-      font-weight: 850;
+      font-weight: 800;
       color: #aaa;
     `}
   ${(props) =>
@@ -27,7 +27,7 @@ export const TodoListTitleText = styled.span<TodoListTitleProps>`
     css`
       display: block;
       font-size: 2.7rem;
-      font-weight: 850;
+      font-weight: 800;
       color: #333;
     `}
 `;

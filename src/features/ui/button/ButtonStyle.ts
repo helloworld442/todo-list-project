@@ -8,7 +8,7 @@ export const StButton = styled.button<ButtonProps>`
   outline: none;
   border-radius: 8px;
   font-size: 1.3rem;
-  font-weight: 850;
+  font-weight: 800;
   color: #fff;
   background: ${(props) => props.theme.baseColor};
 `;
