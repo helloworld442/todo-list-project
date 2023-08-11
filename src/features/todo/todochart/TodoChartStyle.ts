@@ -98,12 +98,12 @@ export const TodoChartDescContent = styled.div`
   display: flex;
   flex-direction: column;
   #profile-name {
-    margin-top: 6px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #888;
     span {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
+      font-weight: 850;
       color: #333;
     }
   }
