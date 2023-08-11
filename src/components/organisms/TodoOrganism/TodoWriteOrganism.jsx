@@ -1,9 +1,12 @@
 import { styled } from "styled-components";
 import TodoWriteField from "../../molecules/TodoWriteField";
 import { TodoWriteButton } from "../../atom/Button/TodoWriteButton";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
+import TodoSelectField from "../../molecules/TodoSelectField";
 
 const TodoWriteOrganism = () => {
+  const colorOptions = useMemo(() => ["tomato", "skyblue", "yellowgreen", "purple"], []);
+  const dateOptions = useMemo(() => ["SUN", "MON", "THU", "WEN", "THR", "FRI", "SUN"], []);
   const [form, setForm] = useState({ title: "", color: "", date: "" });
   const [errors, setErrors] = useState({ title: "", color: "", date: "" });
 
@@ -61,6 +64,20 @@ const TodoWriteOrganism = () => {
         value={form.title}
         error={errors.title}
         onChange={onChangeInput}
+      />
+      <TodoSelectField
+        name="color"
+        value={form.color}
+        error={errors.color}
+        options={colorOptions}
+        onChange={onChangeSelect}
+      />
+      <TodoSelectField
+        name="date"
+        value={form.date}
+        error={errors.date}
+        options={dateOptions}
+        onChange={onChangeSelect}
       />
       <TodoWriteButton>Add</TodoWriteButton>
     </TodoWriteOrganismStyle>
