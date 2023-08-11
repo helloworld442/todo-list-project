@@ -30,8 +30,8 @@ const RegisterOrganism = () => {
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]+$/;
     if (password.trim() === "") return "비밀번호을 입력해주세요";
     if (!passwordRegex.test(password)) return "비밀번호 형식을 지켜주세요";
-    if (password.length > 15) return "비밀번호의 길이는 (5~15)자로 맞춰주세요";
-    if (password.length < 5) return "비밀번호의 길이는 (5~15)자로 맞춰주세요";
+    if (password.length > 15) return "비밀번호의 길이는 (10~15)자로 맞춰주세요";
+    if (password.length < 10) return "비밀번호의 길이는 (10~15)자로 맞춰주세요";
     return "";
   };
 
