@@ -8,7 +8,7 @@ import {
   DropDownMenu,
   DropDownTrigger,
 } from "./SelectStyle";
-import { SelectProps } from "./SelctInterface";
+import { SelectProps } from "./SelectInterface";
 
 const Select = memo(({ name, options, value, error, onChange }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { SelectErrorProps } from "./SelctInterface";
+import { SelectErrorProps } from "./SelectInterface";
 
 export const DropDownBox = styled.div`
   position: relative;
