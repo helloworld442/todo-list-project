@@ -1,5 +1,7 @@
+import ChartTemplate from "../components/templates/ChartTemplate";
+
 const Chart = () => {
-  return <div>chart</div>;
+  return <ChartTemplate />;
 };
 
 export default Chart;
