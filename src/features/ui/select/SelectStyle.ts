@@ -14,7 +14,8 @@ export const DropDownLabel = styled.label`
   color: #aaa;
 `;
 
-export const DropDownTrigger = styled.div<SelectErrorProps>`
+export const DropDownTrigger = styled.span<SelectErrorProps>`
+  display: block;
   width: 100%;
   height: 50px;
   padding: 12px;
