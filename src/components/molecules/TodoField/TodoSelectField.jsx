@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
-import { TodoSelectLabel } from "../atom/Label/TodoSelectLabel";
-import { TodoSelectErrortext, TodoSelectTrigger } from "../atom/Text/TodoSelectText";
+import { TodoSelectLabel } from "../../atom/Label/TodoSelectLabel";
+import { TodoSelectErrortext, TodoSelectTrigger } from "../../atom/Text/TodoSelectText";
 import { useState } from "react";
 
 const TodoSelectField = ({ name, options, value, error, onChange }) => {

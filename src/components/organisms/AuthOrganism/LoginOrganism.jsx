@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
-import TodoWriteField from "../../molecules/TodoWriteField";
-import { TodoWriteButton } from "../../atom/Button/TodoWriteButton";
 import { useCallback, useState } from "react";
 import { AuthFooterAnchor } from "../../atom/Anchor/AuthFooterAnchor";
+import { AuthWriteField } from "../../molecules/AuthField/AuthWriteField";
+import { AuthWriteButton } from "../../atom/Button/AuthWriteButton";
 
 const LoginOrganism = () => {
   const [form, setForm] = useState({ username: "", password: "" });
@@ -75,9 +75,5 @@ const LoginOrganismStyle = styled.form`
   align-items: center;
   gap: 36px;
 `;
-
-const AuthWriteField = styled(TodoWriteField)``;
-
-const AuthWriteButton = styled(TodoWriteButton)``;
 
 export default LoginOrganism;

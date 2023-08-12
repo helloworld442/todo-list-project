@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import { TodoWriteLabel } from "../atom/Label/TodoWriteLabel";
-import { TodoWriteInput } from "../atom/Input/TodoWriteInput";
-import { TodoWriteErrorText } from "../atom/Text/TodoWriteText";
+import { TodoWriteLabel } from "../../atom/Label/TodoWriteLabel";
+import { TodoWriteInput } from "../../atom/Input/TodoWriteInput";
+import { TodoWriteErrorText } from "../../atom/Text/TodoWriteText";
 
 const TodoWriteField = ({ type, name, value, error, onChange }) => {
   return (
