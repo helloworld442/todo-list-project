@@ -7,6 +7,14 @@ const selectDict = {
   date: "DATE",
 };
 
+/**
+ * @param {string} name 드롭창 이름
+ * @param {object} options 드롭창 options들
+ * @param {string} value 드롭창 값
+ * @param {string} error 드롭창 에러
+ * @param {Function} onChange 드롭창의 값이 바뀔 때 호출되는 함수
+ */
+
 const Select = memo(({ name, options, value, error, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
