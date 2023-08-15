@@ -30,10 +30,15 @@ const Select = memo(({ name, options, value, error, onChange }) => {
 
   return (
     <div className="select-box">
+      {/* select box 라벨 영역 */}
       <label className="select-label">{selectDict[name]}</label>
+
+      {/* select box 트리거 영역 */}
       <span className={classNames("select-trigger", { error })} onClick={onOpenSelect}>
         {value || "chose options"}
       </span>
+
+      {/* select box 옵션 영역 */}
       {isOpen && (
         <ul className="select-list">
           {options.map((option, index) => (
@@ -43,6 +48,8 @@ const Select = memo(({ name, options, value, error, onChange }) => {
           ))}
         </ul>
       )}
+
+      {/* selectbox 오류 텍스트 영역 */}
       <span className="select-error">{error}</span>
     </div>
   );
