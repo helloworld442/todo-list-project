@@ -25,16 +25,16 @@ const Footer = () => {
 
   return (
     <nav className="footer-nav">
-      <Link className={classNames("footer-link", { active: active === 0 })}>
+      <Link to="/" className={classNames("footer-link", { active: active === 0 })}>
         <HomeOutlined />
       </Link>
-      <Link className={classNames("footer-link", { active: active === 1 })}>
+      <Link to="/write" className={classNames("footer-link", { active: active === 1 })}>
         <PlusOutlined />
       </Link>
-      <Link className={classNames("footer-link", { active: active === 2 })}>
+      <Link to="/chart" className={classNames("footer-link", { active: active === 2 })}>
         <LineChartOutlined />
       </Link>
-      <Link className={classNames("footer-link", { active: active === 3 })}>
+      <Link to="/login" className={classNames("footer-link", { active: active === 3 })}>
         <UserOutlined />
       </Link>
     </nav>
