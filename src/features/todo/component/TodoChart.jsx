@@ -15,11 +15,18 @@ const TodoChart = () => {
 
   return (
     <div className="todochart">
+      <TodoDescChart data={data} />
       <TodoBarChart data={data} />
       <TodoLineChart data={data} />
     </div>
   );
 };
+
+/*--------------------------------------------------------*
+ * desc chart 컴포넌트
+ *--------------------------------------------------------*/
+
+const TodoDescChart = ({ data }) => {};
 
 /*--------------------------------------------------------*
  * bar chart 컴포넌트
