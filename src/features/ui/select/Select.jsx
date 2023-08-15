@@ -1,13 +1,13 @@
 import "./Select.scss";
 import classNames from "classnames";
-import { useState } from "react";
+import { memo, useState } from "react";
 
 const selectDict = {
   color: "COLOR",
   day: "DAY",
 };
 
-const Select = ({ name, options, value, error, onChange }) => {
+const Select = memo(({ name, options, value, error, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onOpenSelect = () => {
@@ -28,12 +28,16 @@ const Select = ({ name, options, value, error, onChange }) => {
       </span>
       {isOpen && (
         <ul className="select-list">
-          <li className="select-item" onClick={() => onDownSelect()}></li>
+          {options.map((option, index) => (
+            <li key={index} className="select-item" onClick={() => onDownSelect(option)}>
+              {option}
+            </li>
+          ))}
         </ul>
       )}
       <span className="select-error">{error}</span>
     </div>
   );
-};
+});
 
 export { Select };
