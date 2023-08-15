@@ -34,7 +34,7 @@ const Footer = () => {
       <Link to="/chart" className={classNames("footer-link", { active: active === 2 })}>
         <LineChartOutlined />
       </Link>
-      <Link to="/login" className={classNames("footer-link", { active: active === 3 })}>
+      <Link to="/signin" className={classNames("footer-link", { active: active === 3 })}>
         <UserOutlined />
       </Link>
     </nav>

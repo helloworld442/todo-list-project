@@ -1,6 +1,6 @@
 import { Footer, Header, Layout } from "../features/ui";
 
-const Register = () => {
+const SignUp = () => {
   return (
     <Layout>
       <Header />
@@ -9,4 +9,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default SignUp;

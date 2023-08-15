@@ -1,12 +1,14 @@
 import { Footer, Header, Layout } from "../features/ui";
+import { Login } from "../features/user/component";
 
-const Login = () => {
+const SignIn = () => {
   return (
     <Layout>
       <Header />
+      <Login />
       <Footer />
     </Layout>
   );
 };
 
-export default Login;
+export default SignIn;

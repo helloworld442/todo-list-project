@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Write from "../pages/Write";
 import Chart from "../pages/Chart";
-import Login from "../pages/Login";
-import Register from "../pages/Register";
+import SignIn from "../pages/SignIn";
+import SignUp from "../pages/SignUp";
 
 const Router = () => {
   return (
@@ -12,8 +12,8 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/write" element={<Write />} />
         <Route path="/chart" element={<Chart />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );
