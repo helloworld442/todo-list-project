@@ -1,11 +1,12 @@
 import { Footer, Header, Layout } from "../features/ui";
-import { TodoHead } from "../features/todo/component";
+import { TodoHead, TodoList } from "../features/todo/component";
 
 const Home = () => {
   return (
     <Layout>
       <Header />
       <TodoHead />
+      <TodoList />
       <Footer />
     </Layout>
   );
