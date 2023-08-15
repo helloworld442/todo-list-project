@@ -1,9 +1,10 @@
-import { Header, Layout } from "../features/ui";
+import { Footer, Header, Layout } from "../features/ui";
 
 const Home = () => {
   return (
     <Layout>
       <Header />
+      <Footer />
     </Layout>
   );
 };
