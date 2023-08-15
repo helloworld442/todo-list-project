@@ -4,6 +4,8 @@ import classNames from "classnames";
 
 const inputDict = {
   title: "TITLE",
+  username: "USERNAME",
+  password: "PASSWORD",
 };
 
 const Input = memo(({ type, name, value, error, onChange }) => {
