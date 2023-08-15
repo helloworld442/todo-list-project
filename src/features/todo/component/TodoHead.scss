@@ -41,6 +41,7 @@
   height: 100%;
   text-align: center;
   cursor: pointer;
+
   .date-day {
     padding-bottom: 16px;
     display: block;
@@ -48,10 +49,34 @@
     font-weight: 800;
     color: #aaa;
   }
+
   .date-num {
     display: block;
     font-size: 1.05rem;
     font-weight: bold;
     color: #333;
+  }
+
+  .date-icon {
+    position: absolute;
+    bottom: -28px;
+    left: 5.5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background: rgb(101, 136, 247);
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s;
   }
 }
