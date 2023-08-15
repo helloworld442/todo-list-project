@@ -4,7 +4,7 @@ import { memo, useState } from "react";
 
 const selectDict = {
   color: "COLOR",
-  day: "DAY",
+  date: "DATE",
 };
 
 const Select = memo(({ name, options, value, error, onChange }) => {

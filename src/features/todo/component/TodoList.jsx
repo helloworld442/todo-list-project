@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./TodoList.scss";
 import classNames from "classnames";
+import { useState } from "react";
 
 const TodoList = () => {
   return (
