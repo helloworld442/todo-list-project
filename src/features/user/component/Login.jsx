@@ -1,6 +1,7 @@
 import "./Login.scss";
 import { Button, Input } from "../../ui";
 import { useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [form, setForm] = useState({ username: "", password: "" });
@@ -57,6 +58,9 @@ const Login = () => {
         onChange={onChangeInput}
       />
       <Button>SIGN IN</Button>
+      <Link to="/signin" className="login-footer">
+        회원가입 페이지
+      </Link>
     </form>
   );
 };
