@@ -1,6 +1,6 @@
 import { Footer, Header, Layout } from "../features/ui";
 
-const Home = () => {
+const Chart = () => {
   return (
     <Layout>
       <Header />
@@ -9,4 +9,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Chart;
