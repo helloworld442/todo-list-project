@@ -17,8 +17,11 @@ const TodoHead = () => {
 
   return (
     <div className="todohead-box">
+      {/* todo list header title 영역 */}
       <h3 className="todohead-title small">Friday,May 11</h3>
       <h4 className="todohead-title large">To-Do List</h4>
+
+      {/* todo list date menu 영역 */}
       <ul className="todohead-date-list">
         {dates.map((date) => (
           <li key={date.id} className="todohead-date-item" onClick={() => onClickItem(date.id)}>
