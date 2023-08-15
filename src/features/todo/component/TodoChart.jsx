@@ -28,6 +28,8 @@ const TodoChart = () => {
 const TodoBarChart = ({ data }) => {
   const chartRef = useRef(null);
 
+  console.log("helo1 wol1");
+
   useEffect(() => {
     if (!chartRef.current) return;
 
@@ -106,8 +108,6 @@ const TodoBarChart = ({ data }) => {
 
 const TodoLineChart = ({ data }) => {
   const chartRef = useRef(null);
-
-  console.log("helo1 wol1");
 
   useEffect(() => {
     if (!chartRef.current) return;
