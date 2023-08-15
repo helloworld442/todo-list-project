@@ -1,20 +1,40 @@
 import "./Footer.scss";
+import classNames from "classnames";
+import { useLayoutEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HomeOutlined, LineChartOutlined, PlusOutlined, UserOutlined } from "@ant-design/icons";
 
 const Footer = () => {
+  const { pathname } = useLocation();
+  const [active, setActive] = useState(0);
+
+  useLayoutEffect(() => {
+    switch (pathname) {
+      case "/":
+        return setActive(0);
+      case "/write":
+        return setActive(1);
+      case "/chart":
+        return setActive(2);
+      case "/login":
+        return setActive(3);
+      case "/register":
+        return setActive(3);
+    }
+  }, [pathname]);
+
   return (
     <nav className="footer-nav">
-      <Link className="footer-link active">
+      <Link className={classNames("footer-link", { active: active === 0 })}>
         <HomeOutlined />
       </Link>
-      <Link className="footer-link">
+      <Link className={classNames("footer-link", { active: active === 1 })}>
         <PlusOutlined />
       </Link>
-      <Link className="footer-link">
+      <Link className={classNames("footer-link", { active: active === 2 })}>
         <LineChartOutlined />
       </Link>
-      <Link className="footer-link">
+      <Link className={classNames("footer-link", { active: active === 3 })}>
         <UserOutlined />
       </Link>
     </nav>

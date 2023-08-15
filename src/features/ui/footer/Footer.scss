@@ -3,7 +3,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 0 20px;
+  padding: 12px 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,6 @@
 
   &.active {
     padding: 12px;
-    margin-bottom: 8px;
     border-radius: 100%;
     color: #fff;
     background: #6588f7;
