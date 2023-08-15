@@ -16,9 +16,9 @@ const Footer = () => {
         return setActive(1);
       case "/chart":
         return setActive(2);
-      case "/login":
+      case "/signin":
         return setActive(3);
-      case "/register":
+      case "/signup":
         return setActive(3);
     }
   }, [pathname]);
