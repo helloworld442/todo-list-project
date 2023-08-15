@@ -58,7 +58,7 @@ const Login = () => {
         onChange={onChangeInput}
       />
       <Button>SIGN IN</Button>
-      <Link to="/signin" className="login-footer">
+      <Link to="/signup" className="login-footer">
         회원가입 페이지
       </Link>
     </form>

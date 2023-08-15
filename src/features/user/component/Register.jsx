@@ -1,6 +1,7 @@
 import "./Register.scss";
 import { Button, Input } from "../../ui";
 import { useCallback, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [form, setForm] = useState({ email: "", username: "", password: "" });
@@ -79,6 +80,9 @@ const Register = () => {
         onChange={onChangeInput}
       />
       <Button>SIGN UP</Button>
+      <Link to="/signin" className="register-footer">
+        로그인 페이지
+      </Link>
     </form>
   );
 };
