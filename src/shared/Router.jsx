@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 
 const Router = () => {
+  console.log("asfsd");
   return (
     <BrowserRouter>
       <Routes>
