@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 const inputDict = {
   title: "TITLE",
+  email: "EMAIL",
   username: "USERNAME",
   password: "PASSWORD",
 };
