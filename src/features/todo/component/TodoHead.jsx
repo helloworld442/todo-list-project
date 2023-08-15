@@ -16,7 +16,7 @@ const TodoHead = () => {
   const onClickItem = (index) => setIsOpen(index);
 
   return (
-    <div className="todohead-col">
+    <div className="todohead-box">
       <h3 className="todohead-title small">Friday,May 11</h3>
       <h4 className="todohead-title large">To-Do List</h4>
       <ul className="todohead-date-list">
