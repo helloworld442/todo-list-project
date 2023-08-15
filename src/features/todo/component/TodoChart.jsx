@@ -31,6 +31,7 @@ const TodoBarChart = ({ data }) => {
   useEffect(() => {
     if (!chartRef.current) return;
 
+    //svg 크기 데이터 가져오기
     const svg = d3.select(chartRef.current);
 
     const svgWidth = +svg.attr("width");
@@ -41,26 +42,32 @@ const TodoBarChart = ({ data }) => {
     const width = svgWidth - 2 * margin;
     const height = svgHeight - 2 * margin;
 
+    //svg 위치 설정하기
     const g = svg.append("g").attr("transform", `translate(${margin},${margin})`); // 왼쪽과 위에 마진 적용
 
+    //x축 데이터 삽입하기
     const x = d3
       .scaleBand()
       .domain(data.map((d) => d.label))
       .range([0, width])
       .padding(0.3);
 
+    //y축 데이터 삽입하기
     const y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d.value) || 0])
       .range([height, 0]);
 
+    //x-axis x축 데이터 그리기
     g.append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x));
 
+    //y-axis y축 데이터 그리기
     g.append("g").attr("class", "y-axis").call(d3.axisLeft(y).ticks(5, "s"));
 
+    //bar 데이터 그리기
     g.selectAll(".bar")
       .data(data)
       .enter()
@@ -110,6 +117,7 @@ const TodoLineChart = ({ data }) => {
   useEffect(() => {
     if (!chartRef.current) return;
 
+    //svg 크기 데이터 가져오기
     const svg = d3.select(chartRef.current);
 
     const svgWidth = +svg.attr("width");
@@ -120,38 +128,46 @@ const TodoLineChart = ({ data }) => {
     const width = svgWidth - 2 * margin;
     const height = svgHeight - 2 * margin;
 
+    //svg 위치 설정하기
     const g = svg.append("g").attr("transform", `translate(${margin},${margin})`); // 왼쪽과 위에 마진 적용
 
+    //x축 데이터 삽입하기
     const x = d3
       .scaleBand()
       .domain(data.map((d) => d.label))
       .range([0, width])
       .padding(0.3);
 
+    //y축 데이터 삽입하기
     const y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d.value) || 0])
       .range([height, 0]);
 
+    //x-axis x축 데이터 그리기
     g.append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(x));
 
+    //y-axis y축 데이터 그리기
     g.append("g").attr("class", "y-axis").call(d3.axisLeft(y).ticks(5, "s"));
 
+    //line 에니매이션 초기값 설정하기
     const startline = d3
       .line()
       .curve(d3.curveBasis)
       .x((d) => x(d.label) + x.bandwidth() / 2)
       .y((_) => y(0));
 
+    //line 차트 데이터 삽입하기
     const endline = d3
       .line()
       .curve(d3.curveBasis)
       .x((d) => x(d.label) + x.bandwidth() / 2)
       .y((d) => y(d.value));
 
+    //line chart 그리기
     g.append("path")
       .datum(data)
       .attr("fill", "none")
