@@ -1,21 +1,22 @@
 import "./Footer.scss";
+import { Link, useLocation } from "react-router-dom";
 import { HomeOutlined, LineChartOutlined, PlusOutlined, UserOutlined } from "@ant-design/icons";
 
 const Footer = () => {
   return (
     <nav className="footer-nav">
-      <span className="footer-text active">
+      <Link className="footer-link active">
         <HomeOutlined />
-      </span>
-      <span className="footer-text">
+      </Link>
+      <Link className="footer-link">
         <PlusOutlined />
-      </span>
-      <span className="footer-text">
+      </Link>
+      <Link className="footer-link">
         <LineChartOutlined />
-      </span>
-      <span className="footer-text">
+      </Link>
+      <Link className="footer-link">
         <UserOutlined />
-      </span>
+      </Link>
     </nav>
   );
 };
