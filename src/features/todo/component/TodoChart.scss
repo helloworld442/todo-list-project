@@ -19,12 +19,37 @@
   align-items: center;
 
   .circle {
+    width: 300px;
+    height: 300px;
     fill: #eee;
-    stroke: rgb(101, 136, 247);
     stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: stroke 2s ease-out forwards;
+    stroke-linecap: round;
+  }
+
+  .circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+  }
+
+  .circle.small:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 25) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+  .circle.medium:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 50) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+  .circle.large:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 75) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+  .circle.complete:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 100) / 100);
+    stroke: rgb(101, 136, 247);
   }
 
   .todochart-desc-total {

@@ -1,6 +1,7 @@
 import "./TodoChart.scss";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
+import classNames from "classnames";
 
 const TodoChart = () => {
   const data = [
@@ -27,12 +28,31 @@ const TodoChart = () => {
  *--------------------------------------------------------*/
 
 const TodoDescChart = ({ data }) => {
+  const totalTodos = 200;
   const totalCompleteTodos = data.reduce((a, b) => a + b.value, 0);
+  const [totalRate, setTotalRate] = useState(0);
+  const totalTodosRate = 1000 - (1000 * 87) / 100;
+
+  useEffect(() => {
+    if ((totalCompleteTodos / totalTodos) * 100 >= 25) {
+      setTotalRate("small");
+    }
+    if ((totalCompleteTodos / totalTodos) * 100 >= 50) {
+      setTotalRate("medium");
+    }
+    if ((totalTodosRate / totalTodos) * 100 >= 75) {
+      setTotalRate("large");
+    }
+    if ((totalTodosRate / totalTodos) * 100 >= 100) {
+      setTotalRate("complete");
+    }
+  }, [data]);
 
   return (
     <div className="todochart-desc">
       <svg height="320" width="320" className="todochat-desc-circle">
-        <circle class="circle" cx="160" cy="160" r="150" />
+        <circle className="circle" cx="160" cy="160" r="150" />
+        <circle className={classNames("circle", totalRate)} cx="160" cy="160" r="150" />
       </svg>
       <span className="todochart-desc-total">
         <h2>완료한 Todo</h2>
