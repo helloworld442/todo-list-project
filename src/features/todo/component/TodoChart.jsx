@@ -26,7 +26,21 @@ const TodoChart = () => {
  * desc chart 컴포넌트
  *--------------------------------------------------------*/
 
-const TodoDescChart = ({ data }) => {};
+const TodoDescChart = ({ data }) => {
+  const totalCompleteTodos = data.reduce((a, b) => a + b.value, 0);
+
+  return (
+    <div className="todochart-desc">
+      <svg height="320" width="320" className="todochat-desc-circle">
+        <circle class="circle" cx="160" cy="160" r="150" />
+      </svg>
+      <span className="todochart-desc-total">
+        <h2>완료한 Todo</h2>
+        <h1>{totalCompleteTodos}</h1>
+      </span>
+    </div>
+  );
+};
 
 /*--------------------------------------------------------*
  * bar chart 컴포넌트

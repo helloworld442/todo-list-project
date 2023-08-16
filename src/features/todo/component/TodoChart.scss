@@ -1,12 +1,53 @@
 .todochart {
   width: 100%;
-  max-height: 650px;
+  max-height: 600px;
   padding-bottom: 20px;
   box-sizing: border-box;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   gap: 36px;
+}
+
+.todochart-desc {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .circle {
+    stroke: rgb(101, 136, 247);
+    stroke-width: 10;
+    fill-opacity: 0;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: stroke 2s ease-out forwards;
+  }
+
+  .todochart-desc-total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h2 {
+      margin-bottom: 24px;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #333;
+    }
+
+    h1 {
+      margin-top: 24px;
+      font-size: 3rem;
+      font-weight: 900;
+      color: rgb(101, 136, 247);
+      text-align: center;
+    }
+  }
 }
 
 .todochart-bar {
@@ -81,5 +122,11 @@
     font-size: 0.875rem;
     font-weight: bold;
     color: #333;
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
   }
 }
