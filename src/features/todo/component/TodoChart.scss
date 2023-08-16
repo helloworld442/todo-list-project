@@ -28,6 +28,7 @@
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     stroke-linecap: round;
+    transition: all 2s ease-in-out;
   }
 
   .circle:nth-child(1) {
