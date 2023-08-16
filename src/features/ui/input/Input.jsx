@@ -18,6 +18,7 @@ const inputDict = {
  */
 
 const Input = memo(({ type, name, value, error, onChange }) => {
+  console.log("asdfs");
   return (
     <div className="input-box">
       <label className="input-label">{inputDict[name]}</label>
