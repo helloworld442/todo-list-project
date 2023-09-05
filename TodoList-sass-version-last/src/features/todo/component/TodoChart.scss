@@ -1,0 +1,161 @@
+.todochart {
+  width: 100%;
+  max-height: 600px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.todochart-desc {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .circle {
+    width: 300px;
+    height: 300px;
+    fill: #eee;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    stroke-linecap: round;
+    transition: all 2s ease-in-out;
+  }
+
+  .circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+  }
+
+  .circle.small:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 25) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+
+  .circle.medium:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 50) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+
+  .circle.large:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 75) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+
+  .circle.complete:nth-child(2) {
+    stroke-dashoffset: calc(1000 - (1000 * 100) / 100);
+    stroke: rgb(101, 136, 247);
+  }
+
+  .todochart-desc-total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h2 {
+      margin-bottom: 24px;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #333;
+    }
+
+    h1 {
+      margin-top: 24px;
+      font-size: 3rem;
+      font-weight: 900;
+      color: rgb(101, 136, 247);
+      text-align: center;
+    }
+  }
+}
+
+.todochart-bar {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  svg {
+    border: 3px solid rgb(101, 136, 247);
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+
+  .x-axis {
+    font-size: 0.8rem;
+  }
+
+  .y-axis {
+    font-size: 0.8rem;
+  }
+
+  .domain {
+    stroke-width: 2;
+    stroke: #888;
+  }
+
+  text {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .bar {
+    stroke: rgb(101, 136, 247);
+    stroke-opacity: 1;
+    stroke-linecap: round;
+    stroke-width: 5;
+    stroke-dasharray: 0;
+    fill: rgb(101, 136, 247, 0.3);
+    fill-opacity: 1;
+  }
+
+  .bar-text {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.todochart-line {
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  svg {
+    border: 3px solid rgb(101, 136, 247);
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+
+  .x-axis {
+    font-size: 0.8rem;
+  }
+
+  .y-axis {
+    font-size: 0.8rem;
+  }
+
+  .domain {
+    stroke-width: 2;
+    stroke: #888;
+  }
+
+  text {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
